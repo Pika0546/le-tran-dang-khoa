@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.1-web/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Dang Khoa</title>
+</head>
+
+<body>
+    <div class="moving-circle randomly-shape"></div>
+    <div class="moving-triangle randomly-shape"></div>
+    <div class="moving-pixel-heart randomly-shape"></div>
+    <div class="moving-square randomly-shape"></div>
+    <div class="moving-special-circle randomly-shape">
+        <div class="moving-special-circle__code"></div>
+        <div class="moving-special-circle__code"></div>
+        <div class="moving-special-circle__code"></div>
+        <div class="moving-special-circle__code"></div>
+        <div class="moving-special-circle__code"></div>
+    </div>
+    <div class="moving-special-dots randomly-shape">
+        <div class="moving-special-dots__dot"></div>
+        <div class="moving-special-dots__dot"></div>
+        <div class="moving-special-dots__dot"></div>
+        <div class="moving-special-dots__dot"></div>
+        <div class="moving-special-dots__dot"></div>
+        <div class="moving-special-dots__dot"></div>
+        <div class="moving-special-dots__dot"></div>
+        <div class="moving-special-dots__dot"></div>
+        <div class="moving-special-dots__dot"></div>
+        <div class="moving-special-dots__dot"></div>
+        <div class="moving-special-dots__dot"></div>
+        <div class="moving-special-dots__dot"></div>
+        <div class="moving-special-dots__dot"></div>
+        <div class="moving-special-dots__dot"></div>
+        <div class="moving-special-dots__dot"></div>
+    </div>
+    <div class="navigation">
+        <div class="navigation__button  floating-block floating-block-hover" id="navigation-button">
+            <span class="navigation__icon" id="navigation-icon">
+
+            </span>
+        </div>
+        <div class="navigation__nav" id="nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><button class="navigation__link" id="header" data-text="Home">Home</button>
+                </li>
+                <li class="navigation__item"><button class="navigation__link" id="about"
+                        data-text="About">About</button></li>
+                <li class="navigation__item"><button class="navigation__link" id="project"
+                        data-text="Project">Project</button></li>
+                <li class="navigation__item"><button class="navigation__link" id="contact"
+                        data-text="Contact">Contact</button></li>
+            </ul>
+        </div>
+    </div>
+    <div class="home-icon" id="home-icon">
+        <a href="#" class="home-icon--content">K</a>
+    </div>
+    <header class="header part" id="header-section">
+
+        <div class="header__grid-cell header__grid-cell--1">
+            <div class="header__info">
+
+                <p class="header__infor--text">Hello</p>
+                <h3 class="heading-primary" data-text="I'm Dang Khoa">I'm Dang Khoa</h3>
+                <p class="header__infor--text">IT Student at HCMUS</p>
+
+                <button id="more-about-me" class="btn floating-block btn-pink floating-block-hover">More About
+                    Me</button>
+
+            </div>
+        </div>
+        <div class="header__grid-cell header__grid-cell--2">
+            <div class="header__profile-picture special-border">
+                <img src="img/pikaIcon2.jpg" alt="pikachu" class="pic pic__round profile-picture ">
+            </div>
+        </div>
+    </header>
+    <section class="about part" id="about-section">
+        <div class="about__content">
+            <h4 class="heading-tertiary">main info</h4>
+            <h3 class="heading-secondary">About me</h3>
+            <div class="about__base-info">
+                <div class="about__base-info--1">
+                    <div class="about__base-info--img special-border">
+                        <img src="img/pikaIcon2.jpg" alt="" class="pic pic__square profile-picture">
+                    </div>
+                    <div class="about__base-info--contact-container">
+                        <a href="https://www.facebook.com/DangKhoaPika/" class="social-media-icon floating-block floating-block-hover">
+                            <span class="fab fa-facebook-f"></span>
+                        </a>
+                        <a href="#" class="social-media-icon floating-block floating-block-hover">
+                            <span class="fab fa-twitter"></span>
+                        </a>
+                        <a href="https://github.com/Pika0546" class="social-media-icon floating-block floating-block-hover">
+                            <span class="fab fa-github"></span>
+                        </a>
+                        <a href="#" class="social-media-icon floating-block floating-block-hover">
+                            <span class="fab fa-instagram"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="about__base-info--2">
+                    <p class="paragraph paragraph__justify floating-block--paragraph">
+                        <b style="color: white;"> Hi! My name is Le Tran Dang Khoa. I am a IT Student at HCMUS.</b>
+                        <br>
+                        I am 19 and I come from a small islet located in the middle of Tien River in Tan Long, Thanh
+                        Binh, Dong Thap, Vietnam.
+                        My hobbies is listening to musics, playing games, watching movies. I love cat and I enjoy
+                        Coding.
+                    </p>
+                    <button class="about__base-info--btn btn floating-block btn-pink floating-block-hover">
+                        Download CV
+                    </button>
+                    <button id="talk-to-me-btn" class="about__base-info--btn btn floating-block btn-pink floating-block-hover">
+                        Talk to me
+                    </button>
+                    <button class="about__base-info--btn btn floating-block btn-pink floating-block-hover"
+                        id="back-home">
+                        Back to Home page
+                    </button>
+                </div>
+            </div>
+            <div class="about__more-info">
+                <div class="about__tab-btn">
+                    <button id="skill-btn" class="btn btn-tab info-btn">Skill</button>
+                    <button id="experience-btn" class="btn btn-tab info-btn">Experience</button>
+                    <button id="education-btn" class="btn btn-tab info-btn">Education</button>
+                </div>
+                <div class="skill__container more-info-container" id="skill">
+                    <div class="skill__progress">
+                        <div class="skill__info">
+                            <p class="skill__name">HTML</p>
+                            <p class="skill__score">80%</p>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__bar-progress"></div>
+                        </div>
+                    </div>
+                    <div class="skill__progress">
+                        <div class="skill__info">
+                            <p class="skill__name">CSS</p>
+                            <p class="skill__score">70%</p>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__bar-progress"></div>
+                        </div>
+                    </div>
+                    <div class="skill__progress">
+                        <div class="skill__info">
+                            <p class="skill__name">Javascript</p>
+                            <p class="skill__score">50%</p>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__bar-progress"></div>
+                        </div>
+                    </div>
+                    <div class="skill__progress">
+                        <div class="skill__info">
+                            <p class="skill__name">jQuery</p>
+                            <p class="skill__score">40%</p>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__bar-progress"></div>
+                        </div>
+                    </div>
+                    <div class="skill__progress">
+                        <div class="skill__info">
+                            <p class="skill__name">C++</p>
+                            <p class="skill__score">80%</p>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__bar-progress"></div>
+                        </div>
+                    </div>
+                    <div class="skill__progress">
+                        <div class="skill__info">
+                            <p class="skill__name">SCSS</p>
+                            <p class="skill__score">40%</p>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__bar-progress"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience__container more-info-container" id="experience">
+                    <div class="time-line">
+                        <div class="time-line__container time-line__container--left ">
+                            <div class="time-line__content floating-block">
+                                <h4 class="time-line__time">Coming soon!</h4>
+                                <h3 class="time-line__heading">Coming soon!</h3>
+                                <h4 class="time-line__heading--sub">~ ~ ~ ~ ~ ~ ~ ~ ~ ~</h4>
+                                <p class="paragraph paragraph__right">
+                                    Lorem ipsum dolor sit amet consectetur,
+                                    adipisicing elit. Esse ipsa eius iste,
+                                    cumque aperiam sapiente, sint omnis aut odit
+                                </p>
+                            </div>
+                            <div class="time-line__icon time-line__icon--left">
+                                <span class="fas fa-briefcase time-line__icon--icon"></span>
+                            </div>
+                        </div>
+                        <div class="time-line__container time-line__container--right ">
+                            <div class="time-line__content floating-block">
+                                <h4 class="time-line__time">Coming soon!</h4>
+                                <h3 class="time-line__heading">Coming soon!</h3>
+                                <h4 class="time-line__heading--sub">~ ~ ~ ~ ~ ~ ~ ~ ~ ~</h4>
+                                <p class="paragraph paragraph__left">
+                                    Lorem ipsum dolor sit amet consectetur,
+                                    adipisicing elit. Esse ipsa eius iste,
+                                    cumque aperiam sapiente, sint omnis aut odit
+
+                                </p>
+                            </div>
+                            <div class="time-line__icon time-line__icon--right">
+                                <span class="fas fa-briefcase time-line__icon--icon"></span>
+                            </div>
+                        </div>
+                        <div class="time-line__container time-line__container--left">
+                            <div class="time-line__content floating-block">
+                                <h4 class="time-line__time">Coming soon!</h4>
+                                <h3 class="time-line__heading">Coming soon!</h3>
+                                <h4 class="time-line__heading--sub">~ ~ ~ ~ ~ ~ ~ ~ ~ ~</h4>
+                                <p class="paragraph paragraph__right">
+                                    Lorem ipsum dolor sit amet consectetur,
+                                    adipisicing elit. Esse ipsa eius iste,
+                                    cumque aperiam sapiente, sint omnis aut odit
+
+                                </p>
+                            </div>
+                            <div class="time-line__icon time-line__icon--left">
+                                <span class="fas fa-briefcase time-line__icon--icon"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="education__container more-info-container" id="education">
+                    <div class="time-line">
+                        <div class="time-line__container time-line__container--left ">
+                            <div class="time-line__content floating-block">
+                                <h4 class="time-line__time">Jul 2020</h4>
+                                <h3 class="time-line__heading">Javascript and jQuery</h3>
+                                <h4 class="time-line__heading--sub">~ ~ ~ ~ ~ ~ ~ ~ ~ ~</h4>
+                                <p class="paragraph paragraph__right">
+                                    I have studied Javascript since July 2020 and I just took a jQuery course on
+                                    w3school so I have basic knowledge of jQuery
+                                    I have done some Javascript projects of my own, you can visit Project Section to
+                                    check them out.
+                                </p>
+                            </div>
+                            <div class="time-line__icon time-line__icon--left">
+                                <span class="fas fa-book-open time-line__icon--icon"></span>
+                            </div>
+                        </div>
+                        <div class="time-line__container time-line__container--right ">
+                            <div class="time-line__content floating-block">
+                                <h4 class="time-line__time">Jan 2020</h4>
+                                <h3 class="time-line__heading">HTML/CSS</h3>
+                                <h4 class="time-line__heading--sub">~ ~ ~ ~ ~ ~ ~ ~ ~ ~</h4>
+                                <p class="paragraph paragraph__left">
+                                    I have learned HTML/CSS since Lockdown because of Covid-19.
+                                    I have taken some courses about HTML/CSS on w3school.com, freecodecamp, codelearn.io
+                                    and youtube.
+                                </p>
+                            </div>
+                            <div class="time-line__icon time-line__icon--right">
+                                <span class="fas fa-book-open time-line__icon--icon"></span>
+                            </div>
+                        </div>
+                        <div class="time-line__container time-line__container--left">
+                            <div class="time-line__content floating-block">
+                                <h4 class="time-line__time">2019 - now</h4>
+                                <h3 class="time-line__heading">University of Science</h3>
+                                <h4 class="time-line__heading--sub">Information Technology</h4>
+                                <p class="paragraph paragraph__right">
+                                    I am studying Information Technology at VNUHCM - University of Science (HCMUS).
+                                </p>
+                            </div>
+                            <div class="time-line__icon time-line__icon--left">
+                                <span class="fas fa-book-open time-line__icon--icon"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="heading-tertiary margin-top-big margin-bottom-small">Certificates</h4>
+                    <div class="portfolio portfolio--certificate">
+                        <div class="portfolio__cell portfolio__img floating-block">
+                            <a href="img/CodeLearn_AvanC.png" target="_blank">
+                                <img src="img/CodeLearn_AvanC.png" alt="" class="pic portfolio__picture">
+                            </a>
+                            <h3 class="pic__title">C++</h3>
+                        </div>
+                        <div class="portfolio__cell portfolio__img floating-block">
+                            <a href="img/CodeLearn_BasicAlgo.png" target="_blank">
+                                <img src="img/CodeLearn_BasicAlgo.png" alt="" class="pic portfolio__picture">
+                            </a>
+                            <h3 class="pic__title">Basic Algorithm</h3>
+                        </div>
+                        <div class="portfolio__cell portfolio__img floating-block">
+                            <a href="img/CodeLearn_BasicJS.png" target="_blank">
+                                <img src="img/CodeLearn_BasicJS.png" alt="" class="pic portfolio__picture">
+                            </a>
+                            <h3 class="pic__title">Basic JavaScript</h3>
+                        </div>
+                        <div class="portfolio__cell portfolio__img floating-block">
+                            <a href="img/CodeLearn_BasicPython.png">
+                                <img src="img/CodeLearn_BasicPython.png" alt="" class="pic portfolio__picture">
+                            </a>
+                            <h3 class="pic__title">Basic Python</h3>
+                        </div>
+                        <div class="portfolio__cell portfolio__img floating-block">
+                            <a href="img/CodeLearn_DSA.png" target="_blank">
+                                <img src="img/CodeLearn_DSA.png" alt="" class="pic portfolio__picture">
+                            </a>
+                            <h3 class="pic__title">Datastructure and Algorithm</h3>
+                        </div>
+                        <div class="portfolio__cell portfolio__img floating-block">
+                            <a href="img/CodeLearn_mmt.png" target="_blank">
+                                <img src="img/CodeLearn_mmt.png" alt="" class="pic portfolio__picture">
+                            </a>
+                            <h3 class="pic__title">Computer Networking</h3>
+                        </div>
+                        <div class="portfolio__cell portfolio__img floating-block">
+                            <a href="img/CodeLearn_PhanCungMayTinh.png">
+                                <img src="img/CodeLearn_PhanCungMayTinh.png" alt="" class="pic portfolio__picture">
+                            </a>
+                            <h3 class="pic__title">Computer Hardware</h3>
+                        </div>
+                        <div class="portfolio__cell portfolio__img floating-block">
+                            <a href="img/CodeLearn_PhanMemMayTinh.png" target="_blank">
+                                <img src="img/CodeLearn_PhanMemMayTinh.png" alt="" class="pic portfolio__picture">
+                            </a>
+                            <h3 class="pic__title">Computer Software</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="project part" id="project-section">
+        <div class="project__content">
+            <h4 class="heading-tertiary">PORTFOLIO</h4>
+            <h3 class="heading-secondary">LATEST WORKS</h3>
+            <div class="project__tab-btn">
+                <button id="all-btn" class="btn btn-tab port-btn  btn-tab--active"
+                    onclick="showProject(' all-project');">All</button>
+                <button id="web-btn" class="btn btn-tab port-btn"
+                    onclick="showProject(' website-project');">Website</button>
+                <button id="game-btn" class="btn btn-tab port-btn" onclick="showProject(' game-project');">Game</button>
+                <button id="others-btn" class="btn btn-tab port-btn"
+                    onclick="showProject(' others-project');">Others</button>
+            </div>
+            <div class="port-fillter__container">
+                <div class="port-fillter__cell  game-project card">
+                    <div class="card__inner floating-block">
+                        <div class="card__front">
+                            <img src="img/tetris.png" alt="" class="pic portfolio__picture">
+                            <h3 class="pic__title ">Tetris</h3>
+                        </div>
+                        <div class="card__back">
+                            <h3 class="card__header">Tetris</h3>
+                            <p class="paragraph paragraph__justify">
+                                <br>
+                                Tools: HTML, CSS, JavaScript
+                                <br>
+                                <br>
+                                About: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis recusandae suscipit impedit et consectetur error, assumenda nulla sint iste numquam?
+                            </p>
+                            <a href="pika0546.github.io/tetris" target="_blank">
+                                <span class="fas fa-hand-point-right"></span> Try now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="port-fillter__cell others-project card">
+                    <div class="card__inner floating-block">
+                        <div class="card__front">
+                            <img src="img/calendar.png" alt="" class="pic portfolio__picture">
+                            <h3 class="pic__title ">Calendar</h3>
+                        </div>
+                        <div class="card__back">
+                            <h3 class="card__header">Calendar</h3>
+                            <p class="paragraph paragraph__justify">
+                                <br>
+                                Tools: HTML, CSS, JavaScript
+                                <br>
+                                <br>
+                                About: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis recusandae suscipit impedit et consectetur error, assumenda nulla sint iste numquam?
+                            </p>
+                            <a href="pika0546.github.io/htmlCalendar" target="_blank">
+                                <span class="fas fa-hand-point-right"></span> Try now
+
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="port-fillter__cell  game-project card">
+                    <div class="card__inner floating-block">
+                        <div class="card__front">
+                            <img src="img/2048.png" alt="" class="pic portfolio__picture">
+                            <h3 class="pic__title ">2048</h3>
+                        </div>
+                        <div class="card__back">
+                            <h3 class="card__header">2048</h3>
+                            <p class="paragraph paragraph__justify">
+                                <br>
+                                Tools: HTML, CSS, JavaScript
+                                <br>
+                                <br>
+                                About: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis recusandae suscipit impedit et consectetur error, assumenda nulla sint iste numquam?
+                            </p>
+                            <a href="pika0546.github.io/my2048" target="_blank">
+                                <span class="fas fa-hand-point-right"></span> Try now
+                            </a>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="port-fillter__cell game-project card">
+                    <div class="card__inner floating-block">
+                        <div class="card__front">
+                            <img src="img/pikachuGame.png" alt="" class="pic portfolio__picture">
+                            <h3 class="pic__title ">Pikachu</h3>
+                        </div>
+                        <div class="card__back">
+                            <h3 class="card__header">Pikachu</h3>
+                            <p class="paragraph paragraph__justify">
+                                <br>
+                                Tools: HTML, CSS, JavaScript
+                                <br>
+                                <br>
+                                About: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis recusandae suscipit impedit et consectetur error, assumenda nulla sint iste numquam?
+                            </p>
+                            <a href="pika0546.github.io/pikachuGame" target="_blank">
+                                <span class="fas fa-hand-point-right"></span> Try now
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="port-fillter__cell game-project card">
+                    <div class="card__inner floating-block">
+                        <div class="card__front">
+                            <img src="img/jumpingCube.png" alt="" class="pic portfolio__picture">
+                            <h3 class="pic__title">Jumping Cube</h3>
+                        </div>
+                        <div class="card__back">
+                            <h3 class="card__header">Jump and Duck</h3>
+                            <p class="paragraph paragraph__justify">
+                                <br>
+                                Tools: HTML, CSS, JavaScript
+                                <br>
+                                <br>
+                                About: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis recusandae suscipit impedit et consectetur error, assumenda nulla sint iste numquam?
+                            </p>
+                            <a href="pika0546.github.io/jump-and-duck" target="_blank">
+                                <span class="fas fa-hand-point-right"></span> Try now
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="port-fillter__cell game-project card">
+                    <div class="card__inner floating-block">
+                        <div class="card__front">
+                            <img src="img/gameSnake.png" alt="" class="pic portfolio__picture">
+                            <h3 class="pic__title ">Snake The Game</h3>
+                        </div>
+                        <div class="card__back">
+                            <h3 class="card__header">Snake Game</h3>
+                            <p class="paragraph paragraph__justify">
+                                <br>
+                                Tools: HTML, CSS, JavaScript
+                                <br>
+                                <br>
+                                About: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis recusandae suscipit impedit et consectetur error, assumenda nulla sint iste numquam?
+                            </p>
+                            <a href="https://www.youtube.com/watch?v=OfrRXK3a6pw&t=15s" target="_blank">
+                                <span class="fas fa-hand-point-right"></span> See now
+                            </a>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact part" id="contact-section">
+        <div class="contact__content">
+            <h4 class="heading-tertiary">CONTACT</h4>
+            <h3 class="heading-secondary">GET IN TOUCH</h3>
+            <div class="contact__info">
+                <div class="floating-block contact__info__cell ">
+                    <span class="fas fa-phone contact__icon"></span>
+                    <h4 class="contact__info__heading">Phone</h4>
+                    <p class="contact__info--info">0342897xxx</p>
+                </div>
+                <div class="contact__info__cell floating-block">
+                    <span class="fas fa-envelope contact__icon"></span>
+                    <h4 class="contact__info__heading">Email</h4>
+                    <p class="contact__info--info">kthedestroy@gmail.com</p>
+                </div>
+                <div class="contact__info__cell floating-block">
+                    <span class="fab fa-github contact__icon"></span>
+                    <h4 class="contact__info__heading">Github</h4>
+                    <p class="contact__info--info">
+                        <a href="https://github.com/Pika0546">
+                            Pika0546
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="contact__form--container">
+                <form action="" class="contact__form--form">
+                    <div class="contact__form--input">
+                        <div class="guest-info">
+                            <div class="form__input floating-block">
+                                <label for="fname">Name:</label>
+                                <input type="text" id="fname" name="name" autocomplete="off" required="required" disabled>
+                            </div>
+                            <div class="form__input floating-block">
+                                <label for="fmail">Email:</label>
+                                <input type="text" id="fmail" name="mail" autocomplete="off" required="required" disabled>
+                            </div>
+                            <div class="form__input floating-block">
+                                <label for="fsubject">Subject:</label>
+                                <input type="text" id="fsubject" name="subject" autocomplete="off" required="required" disabled>
+                            </div>
+                        </div>
+                        <div class="form__input floating-block contact__message">
+                            <label for="fmessage">Message</label>
+                            <textarea id="fsubject" name="subject" rows="5" required="required" disabled></textarea>
+                        </div>
+                    </div>
+                    <input type="submit" value="Send message" class="btn btn-pink send-btn floating-block floating-block-hover" disabled>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="script/main.js"></script>
+</body>
+
+</html>
