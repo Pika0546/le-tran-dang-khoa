@@ -45,13 +45,17 @@ $(document).ready(function(){
         $(".part").fadeOut(0);
         $(des).fadeIn(300);
     }
-
+    $(".part").hide();
+    $("#header-section").fadeIn(0);
+    $("#loader").animate({
+        height: '0'
+    }, 5000);
     $(".navigation__link").click(function(){
         moveToSection("#" + $(this).attr("id") + "-section");
         navBtn.click();
     })
-    $(".part").fadeOut();
-    $("#header-section").fadeIn();
+    
+    
     $("#talk-to-me-btn").click(function(){
         $("#about-section").fadeOut(300);
         $("#contact-section").fadeIn(300);
