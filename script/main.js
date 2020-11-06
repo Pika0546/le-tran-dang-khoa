@@ -46,7 +46,7 @@ $(document).ready(function(){
         $(des).fadeIn(300);
     }
     $(".part").hide();
-    $("#header-section").fadeIn(0);
+    
     $("#loader").animate({
         height: '0'
     }, 5000);
@@ -55,7 +55,7 @@ $(document).ready(function(){
         navBtn.click();
     })
     
-    
+    $("#header-section").fadeIn(6000);
     $("#talk-to-me-btn").click(function(){
         $("#about-section").fadeOut(300);
         $("#contact-section").fadeIn(300);
