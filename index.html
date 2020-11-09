@@ -370,18 +370,18 @@
             </div>
         </div>
     </section>
-    <section class="project part" id="project-section">
+    <!-- <section class="project part" id="project-section">
         <div class="project__content">
             <h4 class="heading-tertiary">PORTFOLIO</h4>
             <h3 class="heading-secondary">LATEST WORKS</h3>
             <div class="project__tab-btn">
                 <button id="all-btn" class="btn btn-tab port-btn  btn-tab--active"
-                    onclick="showProject(' all-project');">All</button>
+                    onclick="showProjectType(' all-project');">All</button>
                 <button id="web-btn" class="btn btn-tab port-btn"
-                    onclick="showProject(' website-project');">Website</button>
-                <button id="game-btn" class="btn btn-tab port-btn" onclick="showProject(' game-project');">Game</button>
+                    onclick="showProjectType(' website-project');">Website</button>
+                <button id="game-btn" class="btn btn-tab port-btn" onclick="showProjectType(' game-project');">Game</button>
                 <button id="others-btn" class="btn btn-tab port-btn"
-                    onclick="showProject(' others-project');">Others</button>
+                    onclick="showProjectType(' others-project');">Others</button>
             </div>
             <div class="port-fillter__container">
                 <div class="port-fillter__cell  game-project card">
@@ -400,7 +400,7 @@
                                 About: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis recusandae
                                 suscipit impedit et consectetur error, assumenda nulla sint iste numquam?
                             </p>
-                            <a href="pika0546.github.io/tetris" target="_blank">
+                            <a href="https://pika0546.github.io/tetris/" target="_blank">
                                 <span class="fas fa-hand-point-right"></span> Try now
                             </a>
                         </div>
@@ -422,7 +422,7 @@
                                 About: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis recusandae
                                 suscipit impedit et consectetur error, assumenda nulla sint iste numquam?
                             </p>
-                            <a href="pika0546.github.io/htmlCalendar" target="_blank">
+                            <a href="https://pika0546.github.io/htmlCalendar/" target="_blank">
                                 <span class="fas fa-hand-point-right"></span> Try now
 
                             </a>
@@ -446,7 +446,7 @@
                                 About: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis recusandae
                                 suscipit impedit et consectetur error, assumenda nulla sint iste numquam?
                             </p>
-                            <a href="pika0546.github.io/my2048" target="_blank">
+                            <a href="https://pika0546.github.io/my2048/" target="_blank">
                                 <span class="fas fa-hand-point-right"></span> Try now
                             </a>
                         </div>
@@ -469,7 +469,7 @@
                                 About: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis recusandae
                                 suscipit impedit et consectetur error, assumenda nulla sint iste numquam?
                             </p>
-                            <a href="pika0546.github.io/pikachuGame" target="_blank">
+                            <a href="https://pika0546.github.io/pikachuGame/" target="_blank">
                                 <span class="fas fa-hand-point-right"></span> Try now
                             </a>
                         </div>
@@ -492,7 +492,7 @@
                                 About: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis recusandae
                                 suscipit impedit et consectetur error, assumenda nulla sint iste numquam?
                             </p>
-                            <a href="pika0546.github.io/jump-and-duck" target="_blank">
+                            <a href="https://pika0546.github.io/jump-and-duck/" target="_blank">
                                 <span class="fas fa-hand-point-right"></span> Try now
                             </a>
                         </div>
@@ -521,6 +521,51 @@
                         </div>
                     </div>
 
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="project part" id="project-section">
+        <div class="project__content">
+            <h4 class="heading-tertiary">PORTFOLIO</h4>
+            <h3 class="heading-secondary">LATEST WORKS</h3>
+            <div class="project__tab-btn">
+                <button id="all-btn" class="btn btn-tab port-btn  btn-tab--active"
+                    onclick="showProjectType(' all-project');">All</button>
+                <button id="web-btn" class="btn btn-tab port-btn"
+                    onclick="showProjectType(' website-project');">Website</button>
+                <button id="game-btn" class="btn btn-tab port-btn"
+                    onclick="showProjectType(' game-project');">Game</button>
+                <button id="others-btn" class="btn btn-tab port-btn"
+                    onclick="showProjectType(' others-project');">Others</button>
+            </div>
+            <div class="port-fillter__container">
+                <div class="port-fillter__cell  game-project floating-block" onclick="slideShow(0)">
+                    <img src="img/tetris.png" alt="" class="pic portfolio__picture">
+                    <h3 class="port-fillter__cell__title ">Tetris</h3>
+                </div>
+                <div class="port-fillter__cell others-project floating-block" onclick="slideShow(1)">
+                    <img src="img/calendar.png" alt="" class="pic portfolio__picture">
+                    <h3 class="port-fillter__cell__title ">Calendar</h3>
+
+                </div>
+                <div class="port-fillter__cell  game-project floating-block" onclick="slideShow(2)">
+                    <img src="img/2048.png" alt="" class="pic portfolio__picture">
+                    <h3 class="port-fillter__cell__title ">2048</h3>
+                </div>
+                <div class="port-fillter__cell game-project floating-block" onclick="slideShow(3)">
+                    <img src="img/pikachuGame.png" alt="" class="pic portfolio__picture">
+                    <h3 class="port-fillter__cell__title ">Pikachu</h3>
+
+                </div>
+                <div class="port-fillter__cell game-project floating-block" onclick="slideShow(4)">
+                    <img src="img/jumpingCube.png" alt="" class="pic portfolio__picture">
+                    <h3 class="port-fillter__cell__title">Jumping Cube</h3>
+                </div>
+                <div class="port-fillter__cell game-project floating-block" onclick="slideShow(5)">
+                    <img src="img/gameSnake.png" alt="" class="pic portfolio__picture">
+                    <h3 class="port-fillter__cell__title ">Snake The Game</h3>
                 </div>
             </div>
         </div>
@@ -586,8 +631,7 @@
                     &copy; 2020 by Dang Khoa
                 </div>
                 <div class="footer__social">
-                    <a href="https://www.facebook.com/DangKhoaPika/"
-                        class="footer__social--icon">
+                    <a href="https://www.facebook.com/DangKhoaPika/" class="footer__social--icon">
                         <span class="fab fa-facebook-f"></span>
                         <p>DangKhoaPika</p>
                     </a>
@@ -603,10 +647,274 @@
                             </a> -->
                 </div>
             </div>
-           
+
         </div>
     </section>
+    <section class="project-details" id="project-details-section">
+        <div class="project-details__content">
+            <div class="slide">
+                <div class="slide__container">
+                    <div class="slide__content">
+                        <div class="slide__header">
+                            <h3 class="slide__name">Tetris</h3>
+                            <h4 class="slide__category"><span>Category</span> - Game</h4>
+                            <p class="slide__number">1/7</p>
+                        </div>
+                        <div class="slide__detail">
+                            <div class="slide__brief">
+                                <h4 class="slide__brief__header">
+                                    Project Brief
+                                </h4>
+                                <p class="paragraph paragraph__justify">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque ratione expedita
+                                    aliquam quaerat at modi ducimus voluptatum delectus quia? Illo, deserunt quasi atque
+                                    quas modi aperiam laborum incidunt aliquam soluta!
+                                </p>
+                            </div>
+                            <div class="slide__info">
+                                <h4 class="slide__brief__header">
+                                    Project Info
+                                </h4>
+                                <p class="paragraph"> <span>Date - </span>2020</p>
+                                <p class="paragraph"> <span>Author - </span>Me</p>
+                                <p class="paragraph"> <span>Tools - </span>HTML, CSS, JavaScript</p>
+                                <p class="paragraph"> <span>Link - </span><a href="https://pika0546.github.io/tetris/"
+                                        target="_blank">pika0546/github.io/testris</a></p>
+                            </div>
+                        </div>
+                        <div class="slide__project">
+                            <div class="slide__project__picture">
+                                <img src="img/tetrisIframe.png" alt="">
+                                <div class="slide__link">
+                                    <i class="fas fa-hand-point-right slide__pointer"></i>
+                                    <a href="https://pika0546.github.io/tetris/"
+                                    target="_blank">See now</a>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="slide__container">
+                    <div class="slide__content">
+                        <div class="slide__header">
+                            <h3 class="slide__name">Calendar</h3>
+                            <h4 class="slide__category"><span>Category</span> - Others</h4>
+                            <p class="slide__number">2/7</p>
+                        </div>
+                        <div class="slide__detail">
+                            <div class="slide__brief">
+                                <h4 class="slide__brief__header">
+                                    Project Brief
+                                </h4>
+                                <p class="paragraph paragraph__left">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque ratione expedita
+                                    aliquam quaerat at modi ducimus voluptatum delectus quia? Illo, deserunt quasi atque
+                                    quas modi aperiam laborum incidunt aliquam soluta!
+                                </p>
+                            </div>
+                            <div class="slide__info">
+                                <h4 class="slide__brief__header">
+                                    Project Info
+                                </h4>
+                                <p class="paragraph"> <span>Date - </span>2020</p>
+                                <p class="paragraph"> <span>Author - </span>Me</p>
+                                <p class="paragraph"> <span>Tools - </span>HTML, CSS, JavaScript</p>
+                                <p class="paragraph"> <span>Link - </span><a href="https://pika0546.github.io/calendar/"
+                                        target="_blank">pika0546.github.io/calendar</a></p>
+                            </div>
+                        </div>
+                        <div class="slide__project">
+                            <div class="slide__project__picture">
+                                <img src="img/calendarIframe.png" alt="">
+                                <div class="slide__link">
+                                    <i class="fas fa-hand-point-right slide__pointer"></i>
+                                    <a href="https://pika0546.github.io/calendar/"
+                                    target="_blank">See now</a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="slide__container">
+                    <div class="slide__content">
+                        <div class="slide__header">
+                            <h3 class="slide__name">2048</h3>
+                            <h4 class="slide__category"><span>Category</span> - Game</h4>
+                            <p class="slide__number">3/7</p>
+                        </div>
+                        <div class="slide__detail">
+                            <div class="slide__brief">
+                                <h4 class="slide__brief__header">
+                                    Project Brief
+                                </h4>
+                                <p class="paragraph paragraph__justify">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque ratione expedita
+                                    aliquam quaerat at modi ducimus voluptatum delectus quia? Illo, deserunt quasi atque
+                                    quas modi aperiam laborum incidunt aliquam soluta!
+                                </p>
+                            </div>
+                            <div class="slide__info">
+                                <h4 class="slide__brief__header">
+                                    Project Info
+                                </h4>
+                                <p class="paragraph"> <span>Date - </span>2020</p>
+                                <p class="paragraph"> <span>Author - </span>Me</p>
+                                <p class="paragraph"> <span>Tools - </span>HTML, CSS, JavaScript</p>
+                                <p class="paragraph"> <span>Link - </span><a href="https://pika0546.github.io/my2048/"
+                                        target="_blank">pika0546.github.io/my2048</a></p>
+                            </div>
+                        </div>
+                        <div class="slide__project">
+                            <div class="slide__project__picture">
+                                <img src="img/2048Iframe.png" alt="">
+                                <div class="slide__link">
+                                    <i class="fas fa-hand-point-right slide__pointer"></i>
+                                    <a href="https://pika0546.github.io/my2048/"
+                                    target="_blank">See now</a>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
 
+                <div class="slide__container">
+                    <div class="slide__content">
+                        <div class="slide__header">
+                            <h3 class="slide__name">Pikachu</h3>
+                            <h4 class="slide__category"><span>Category</span> - Game</h4>
+                            <p class="slide__number">4/7</p>
+                        </div>
+                        <div class="slide__detail">
+                            <div class="slide__brief">
+                                <h4 class="slide__brief__header">
+                                    Project Brief
+                                </h4>
+                                <p class="paragraph paragraph__justify">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque ratione expedita
+                                    aliquam quaerat at modi ducimus voluptatum delectus quia? Illo, deserunt quasi atque
+                                    quas modi aperiam laborum incidunt aliquam soluta!
+                                </p>
+                            </div>
+                            <div class="slide__info">
+                                <h4 class="slide__brief__header">
+                                    Project Info
+                                </h4>
+                                <p class="paragraph"> <span>Date - </span>2020</p>
+                                <p class="paragraph"> <span>Author - </span>Me</p>
+                                <p class="paragraph"> <span>Tools - </span>HTML, CSS, JavaScript</p>
+                                <p class="paragraph"> <span>Link - </span><a href="https://pika0546.github.io/pikachuGame/"
+                                        target="_blank">pika0546.github.io/pikachuGame</a></p>
+                            </div>
+                        </div>
+                        <div class="slide__project">
+                            <div class="slide__project__picture">
+                                <img src="img/pikachuIframe.png" alt="">
+                                <div class="slide__link">
+                                    <i class="fas fa-hand-point-right slide__pointer"></i>
+                                    <a href="https://pika0546.github.io/pikachuGame/"
+                                    target="_blank">See now</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="slide__container">
+                    <div class="slide__content">
+                        <div class="slide__header">
+                            <h3 class="slide__name">Jumping Cube</h3>
+                            <h4 class="slide__category"><span>Category</span> - Game</h4>
+                            <p class="slide__number">5/6</p>
+                        </div>
+                        <div class="slide__detail">
+                            <div class="slide__brief">
+                                <h4 class="slide__brief__header">
+                                    Project Brief
+                                </h4>
+                                <p class="paragraph paragraph__justify">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque ratione expedita
+                                    aliquam quaerat at modi ducimus voluptatum delectus quia? Illo, deserunt quasi atque
+                                    quas modi aperiam laborum incidunt aliquam soluta!
+                                </p>
+                            </div>
+                            <div class="slide__info">
+                                <h4 class="slide__brief__header">
+                                    Project Info
+                                </h4>
+                                <p class="paragraph"> <span>Date - </span>2020</p>
+                                <p class="paragraph"> <span>Author - </span>Me</p>
+                                <p class="paragraph"> <span>Tools - </span>HTML, CSS, JavaScript</p>
+                                <p class="paragraph"> <span>Link - </span><a href="https://pika0546.github.io/jump-and-duck/"
+                                        target="_blank">pika0546.github.io/jump-and-duck</a></p>
+                            </div>
+                        </div>
+                        <div class="slide__project">
+                            <div class="slide__project__picture">
+                                <img src="img/jumpingCubeIframe.png" alt="">
+                                <div class="slide__link">
+                                    <i class="fas fa-hand-point-right slide__pointer"></i>
+                                    <a href="https://pika0546.github.io/jump-and-duck/"
+                                    target="_blank">See now</a>
+                                </div>
+                            </div>
+                            <iframe src="https://pika0546.github.io/tetris/" frameborder="0" allowfullscreen
+                                width="100%" height="600"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide__container">
+                    <div class="slide__content">
+                        <div class="slide__header">
+                            <h3 class="slide__name">Snake the Game</h3>
+                            <h4 class="slide__category"><span>Category</span> - Game</h4>
+                            <p class="slide__number">4/7</p>
+                        </div>
+                        <div class="slide__detail">
+                            <div class="slide__brief">
+                                <h4 class="slide__brief__header">
+                                    Project Brief
+                                </h4>
+                                <p class="paragraph paragraph__justify">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque ratione expedita
+                                    aliquam quaerat at modi ducimus voluptatum delectus quia? Illo, deserunt quasi atque
+                                    quas modi aperiam laborum incidunt aliquam soluta!
+                                </p>
+                            </div>
+                            <div class="slide__info">
+                                <h4 class="slide__brief__header">
+                                    Project Info
+                                </h4>
+                                <p class="paragraph"> <span>Date - </span>2020</p>
+                                <p class="paragraph"> <span>Author - </span>Me</p>
+                                <p class="paragraph"> <span>Tools - </span>C++</p>
+                                <p class="paragraph"> <span>Link - </span><a href="https://www.youtube.com/watch?v=OfrRXK3a6pw&t=15s"
+                                        target="_blank">Youtube</a></p>
+                            </div>
+                        </div>
+                        <div class="slide__project">
+                            <div class="slide__project__picture">
+                                <img src="img/gameSnakeIframe.png" alt="">
+                                <div class="slide__link">
+                                    <i class="fas fa-hand-point-right slide__pointer"></i>
+                                    <a href="https://www.youtube.com/watch?v=OfrRXK3a6pw&t=15s"
+                                    target="_blank">See now</a>
+                                </div>
+                            </div>
+                            <iframe src="https://pika0546.github.io/tetris/" frameborder="0" allowfullscreen
+                                width="100%" height="600"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="slide__move" id="next-slide"> <i class="fas fa-angle-right"></i> </button>
+                <button class="slide__move" id="prev-slide"> <i class="fas fa-angle-left"></i> </button>
+                <button class="slide__close floating-block" id="close-slide" onclick="closeSlideShow()"> <i class="fas fa-times"></i> </button>
+            </div>
+        </div>
+    </section>
     <script type="text/javascript" src="script/main.js"></script>
 
 </body>
