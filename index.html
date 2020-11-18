@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./fontawesome-free-5.15.1-web/css/all.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="shortcut icon" type="image/png" href="./img/coding.png">
+    <link rel="shortcut icon" type="image/png" href="./img/others/K.png">  
     <title>Dang Khoa</title>
 </head>
 
@@ -23,6 +23,7 @@
         <div class="moving-special-circle__code"></div>
         <div class="moving-special-circle__code"></div>
     </div>
+
     <div class="moving-special-dots randomly-shape">
         <div class="moving-special-dots__dot"></div>
         <div class="moving-special-dots__dot"></div>
@@ -40,12 +41,14 @@
         <div class="moving-special-dots__dot"></div>
         <div class="moving-special-dots__dot"></div>
     </div>
+
     <div class="moving-star randomly-shape"></div>
+
     <div class="loader__container" id="loader">
         <div class="loader__content">
             <div class="loader__shape">
                 <div class="loader__square"></div>
-                <div class="loader__triangle"></div>
+                <div class="loader__triangle pink-border"></div>
                 <div class="loader__circle"></div>
                 <div class="loader__diamond"></div>
             </div>
@@ -61,7 +64,20 @@
         </div>
     </div>
 
-    </div>
+    <div class="style-switcher floating-block">
+		<div class="toggle-style floating-block">
+			<i class="fas fa-cog fa-spin pink-text"></i>
+		</div>
+		<h5 class="pink-text">Style switcher</h5>
+		<ul class="list-unstyled">
+			<li class="main-pink" style="background-color: #fb839e" onclick="setActiveStyle('pink')"></li>
+			<li class="main-yellow" style="background-color: #ec9412" onclick="setActiveStyle('yellow')"></li>
+			<li class="main-green" style="background-color: #1fc586" onclick="setActiveStyle('green')"></li>
+			<li class="main-blue" style="background-color: #2eb1ed" onclick="setActiveStyle('blue')"></li>
+			<li class="main-red" style="background-color: #cc3a3b" onclick="setActiveStyle('red')"></li>
+		</ul>
+	</div>
+
     <div class="navigation">
         <div class="navigation__button  floating-block floating-block-hover" id="navigation-button">
             <span class="navigation__icon" id="navigation-icon">
@@ -81,37 +97,75 @@
             </ul>
         </div>
     </div>
-    <div class="home-icon" id="home-icon">
-        <a href="#" class="home-icon--content">K</a>
+
+    <div class="home-icon pink-border" id="home-icon">
+        <a href="#" class="home-icon--content pink-text">K</a>
     </div>
+
     <header class="header part" id="header-section">
 
         <div class="header__grid-cell header__grid-cell--1">
             <div class="header__info">
 
                 <p class="header__infor--text">Hello</p>
-                <h3 class="heading-primary" data-text="I'm Dang Khoa">I'm Dang Khoa</h3>
-                <p class="header__infor--text">IT Student at HCMUS</p>
+                <h3 class="heading-primary flip-container" data-text="I'm Dang Khoa">
+                    <p>I'm</p>
+                    <div class="flip-text">
+                       <div>
+                           <span>Dang Khoa <br></span>  
+                           <span>a Student <br></span> 
+                           <span>a Developer <br></span> 
+                           <span>and <br></span> 
+                           <span>a Dreamer</span> 
+                       </div>
+                   
+                    </div>
+                </h3>
+                <p class="header__infor--text">~ ~ ~ ~ ~ ~ ~ ~ ~ ~ </p>
 
-                <button id="more-about-me" class="btn floating-block btn-pink floating-block-hover">More About
+                <button id="more-about-me" class="btn floating-block btn-mg-t floating-block-hover pink-text">More About
                     Me</button>
 
             </div>
         </div>
         <div class="header__grid-cell header__grid-cell--2">
-            <div class="header__profile-picture special-border">
+            <!-- <div class="header__profile-picture special-border">
                 <img src="img/pikaIcon2.jpg" alt="pikachu" class="pic pic__round profile-picture ">
+            </div> -->
+            <div class="header__imgage-box box__container">
+                <div class="box__area">
+                    <div class="box__face box__face--1 special-border">
+                        <img src="img/profile/ironman.jpg" alt="">
+                    </div>
+                    <div class="box__face box__face--2 special-border">
+                        <img src="img/profile/captain.jpg" alt="">
+                    </div>
+                    <div class="box__face box__face--3 special-border">
+                        <img src="img/profile/hulk.jpg" alt="">
+                    </div>
+                    <div class="box__face box__face--4 special-border">
+                        <img src="img/profile/BW.jpg" alt="">
+                    </div>
+
+                </div>
             </div>
         </div>
     </header>
+
     <section class="about part" id="about-section">
         <div class="about__content">
-            <h4 class="heading-tertiary">main info</h4>
+            <h4 class="heading-tertiary pink-text">main info</h4>
             <h3 class="heading-secondary">About me</h3>
             <div class="about__base-info">
                 <div class="about__base-info--1">
+                   
                     <div class="about__base-info--img special-border">
-                        <img src="img/pikaIcon2.jpg" alt="" class="pic pic__square profile-picture">
+                        <div class="clip-path__container">
+                            <div class="clip-path__clip clip-path__clip--1"></div>
+                            <div class="clip-path__clip clip-path__clip--2"></div>
+                            <div class="clip-path__clip clip-path__clip--3"></div>
+
+                        </div>
                     </div>
                     <div class="about__base-info--contact-container">
                         <a href="https://www.facebook.com/DangKhoaPika/"
@@ -140,25 +194,25 @@
                         Coding.
                     </p>
                     <div class="about__base-info--2__button">
-                        <button class="about__base-info--btn btn floating-block btn-pink floating-block-hover">
+                        <button class="about__base-info--btn btn floating-block btn-mg-t floating-block-hover pink-text">
                             Download CV
                         </button>
                         <button id="talk-to-me-btn"
-                            class="about__base-info--btn btn floating-block btn-pink floating-block-hover">
+                            class="about__base-info--btn btn floating-block btn-mg-t floating-block-hover pink-text">
                             Talk to me
                         </button>
-                        <button class="about__base-info--btn btn floating-block btn-pink floating-block-hover"
-                            id="back-home">
-                            Back to Home page
+                        <button class="about__base-info--btn btn floating-block btn-mg-t floating-block-hover pink-text"
+                            id="my-work-btn">
+                            See my works
                         </button>
                     </div>
                 </div>
             </div>
             <div class="about__more-info">
                 <div class="about__tab-btn">
-                    <button id="skill-btn" class="btn btn-tab info-btn">Skill</button>
-                    <button id="experience-btn" class="btn btn-tab info-btn">Experience</button>
-                    <button id="education-btn" class="btn btn-tab info-btn">Education</button>
+                    <button id="skill-btn" class="btn btn-tab pink-hover-text info-btn transparent-text" onclick="showInfo('skill')">Skill</button>
+                    <button id="experience-btn" class="btn btn-tab pink-hover-text info-btn transparent-text" onclick="showInfo('experience')">Experience</button>
+                    <button id="education-btn" class="btn btn-tab pink-hover-text info-btn transparent-text" onclick="showInfo('education')">Education</button>
                 </div>
                 <div class="skill__container more-info-container" id="skill">
                     <div class="skill__progress">
@@ -220,7 +274,7 @@
                     <div class="time-line">
                         <div class="time-line__container time-line__container--left ">
                             <div class="time-line__content floating-block">
-                                <h4 class="time-line__time">Coming soon!</h4>
+                                <h4 class="time-line__time pink-text">Coming soon!</h4>
                                 <h3 class="time-line__heading">Coming soon!</h3>
                                 <h4 class="time-line__heading--sub">~ ~ ~ ~ ~ ~ ~ ~ ~ ~</h4>
                                 <p class="paragraph paragraph__right">
@@ -230,12 +284,12 @@
                                 </p>
                             </div>
                             <div class="time-line__icon time-line__icon--left">
-                                <span class="fas fa-briefcase time-line__icon--icon"></span>
+                                <span class="fas fa-briefcase time-line__icon--icon pink-text"></span>
                             </div>
                         </div>
                         <div class="time-line__container time-line__container--right ">
                             <div class="time-line__content floating-block">
-                                <h4 class="time-line__time">Coming soon!</h4>
+                                <h4 class="time-line__time pink-text">Coming soon!</h4>
                                 <h3 class="time-line__heading">Coming soon!</h3>
                                 <h4 class="time-line__heading--sub">~ ~ ~ ~ ~ ~ ~ ~ ~ ~</h4>
                                 <p class="paragraph paragraph__left">
@@ -246,12 +300,12 @@
                                 </p>
                             </div>
                             <div class="time-line__icon time-line__icon--right">
-                                <span class="fas fa-briefcase time-line__icon--icon"></span>
+                                <span class="fas fa-briefcase time-line__icon--icon pink-text"></span>
                             </div>
                         </div>
                         <div class="time-line__container time-line__container--left">
                             <div class="time-line__content floating-block">
-                                <h4 class="time-line__time">Coming soon!</h4>
+                                <h4 class="time-line__time pink-text">Coming soon!</h4>
                                 <h3 class="time-line__heading">Coming soon!</h3>
                                 <h4 class="time-line__heading--sub">~ ~ ~ ~ ~ ~ ~ ~ ~ ~</h4>
                                 <p class="paragraph paragraph__right">
@@ -262,7 +316,7 @@
                                 </p>
                             </div>
                             <div class="time-line__icon time-line__icon--left">
-                                <span class="fas fa-briefcase time-line__icon--icon"></span>
+                                <span class="fas fa-briefcase time-line__icon--icon pink-text"></span>
                             </div>
                         </div>
                     </div>
@@ -272,7 +326,7 @@
                     <div class="time-line">
                         <div class="time-line__container time-line__container--left ">
                             <div class="time-line__content floating-block">
-                                <h4 class="time-line__time">Jul 2020</h4>
+                                <h4 class="time-line__time pink-text">Jul 2020</h4>
                                 <h3 class="time-line__heading">Javascript and jQuery</h3>
                                 <h4 class="time-line__heading--sub">~ ~ ~ ~ ~ ~ ~ ~ ~ ~</h4>
                                 <p class="paragraph paragraph__right">
@@ -283,12 +337,12 @@
                                 </p>
                             </div>
                             <div class="time-line__icon time-line__icon--left">
-                                <span class="fas fa-book-open time-line__icon--icon"></span>
+                                <span class="fas fa-book-open time-line__icon--icon pink-text"></span>
                             </div>
                         </div>
                         <div class="time-line__container time-line__container--right ">
                             <div class="time-line__content floating-block">
-                                <h4 class="time-line__time">Jan 2020</h4>
+                                <h4 class="time-line__time pink-text">Jan 2020</h4>
                                 <h3 class="time-line__heading">HTML/CSS</h3>
                                 <h4 class="time-line__heading--sub">~ ~ ~ ~ ~ ~ ~ ~ ~ ~</h4>
                                 <p class="paragraph paragraph__left">
@@ -298,12 +352,12 @@
                                 </p>
                             </div>
                             <div class="time-line__icon time-line__icon--right">
-                                <span class="fas fa-book-open time-line__icon--icon"></span>
+                                <span class="fas fa-book-open time-line__icon--icon pink-text"></span>
                             </div>
                         </div>
                         <div class="time-line__container time-line__container--left">
                             <div class="time-line__content floating-block">
-                                <h4 class="time-line__time">2019 - now</h4>
+                                <h4 class="time-line__time pink-text">2019 - now</h4>
                                 <h3 class="time-line__heading">University of Science</h3>
                                 <h4 class="time-line__heading--sub">Information Technology</h4>
                                 <p class="paragraph paragraph__right">
@@ -311,57 +365,57 @@
                                 </p>
                             </div>
                             <div class="time-line__icon time-line__icon--left">
-                                <span class="fas fa-book-open time-line__icon--icon"></span>
+                                <span class="fas fa-book-open time-line__icon--icon pink-text" ></span>
                             </div>
                         </div>
                     </div>
                     <h4 class="heading-tertiary margin-top-big margin-bottom-small">Certificates</h4>
                     <div class="portfolio portfolio--certificate">
                         <div class="portfolio__cell portfolio__img floating-block">
-                            <a href="img/CodeLearn_AvanC.png" target="_blank">
-                                <img src="img/CodeLearn_AvanC.png" alt="" class="pic portfolio__picture">
+                            <a href="img/certificates/CodeLearn_AvanC.png" target="_blank">
+                                <img src="img/certificates/CodeLearn_AvanC.png" alt="" class="pic portfolio__picture">
                             </a>
                             <h3 class="pic__title">C++</h3>
                         </div>
                         <div class="portfolio__cell portfolio__img floating-block">
-                            <a href="img/CodeLearn_BasicAlgo.png" target="_blank">
-                                <img src="img/CodeLearn_BasicAlgo.png" alt="" class="pic portfolio__picture">
+                            <a href="img/certificates/CodeLearn_BasicAlgo.png" target="_blank">
+                                <img src="img/certificates/CodeLearn_BasicAlgo.png" alt="" class="pic portfolio__picture">
                             </a>
                             <h3 class="pic__title">Basic Algorithm</h3>
                         </div>
                         <div class="portfolio__cell portfolio__img floating-block">
-                            <a href="img/CodeLearn_BasicJS.png" target="_blank">
-                                <img src="img/CodeLearn_BasicJS.png" alt="" class="pic portfolio__picture">
+                            <a href="img/certificates/CodeLearn_BasicJS.png" target="_blank">
+                                <img src="img/certificates/CodeLearn_BasicJS.png" alt="" class="pic portfolio__picture">
                             </a>
                             <h3 class="pic__title">Basic JavaScript</h3>
                         </div>
                         <div class="portfolio__cell portfolio__img floating-block">
-                            <a href="img/CodeLearn_BasicPython.png">
-                                <img src="img/CodeLearn_BasicPython.png" alt="" class="pic portfolio__picture">
+                            <a href="img/certificates/CodeLearn_BasicPython.png">
+                                <img src="img/certificates/CodeLearn_BasicPython.png" alt="" class="pic portfolio__picture">
                             </a>
                             <h3 class="pic__title">Basic Python</h3>
                         </div>
                         <div class="portfolio__cell portfolio__img floating-block">
-                            <a href="img/CodeLearn_DSA.png" target="_blank">
-                                <img src="img/CodeLearn_DSA.png" alt="" class="pic portfolio__picture">
+                            <a href="img/certificates/CodeLearn_DSA.png" target="_blank">
+                                <img src="img/certificates/CodeLearn_DSA.png" alt="" class="pic portfolio__picture">
                             </a>
                             <h3 class="pic__title">Datastructure and Algorithm</h3>
                         </div>
                         <div class="portfolio__cell portfolio__img floating-block">
-                            <a href="img/CodeLearn_mmt.png" target="_blank">
-                                <img src="img/CodeLearn_mmt.png" alt="" class="pic portfolio__picture">
+                            <a href="img/certificates/CodeLearn_mmt.png" target="_blank">
+                                <img src="img/certificates/CodeLearn_mmt.png" alt="" class="pic portfolio__picture">
                             </a>
                             <h3 class="pic__title">Computer Networking</h3>
                         </div>
                         <div class="portfolio__cell portfolio__img floating-block">
-                            <a href="img/CodeLearn_PhanCungMayTinh.png">
-                                <img src="img/CodeLearn_PhanCungMayTinh.png" alt="" class="pic portfolio__picture">
+                            <a href="img/certificates/CodeLearn_PhanCungMayTinh.png">
+                                <img src="img/certificates/CodeLearn_PhanCungMayTinh.png" alt="" class="pic portfolio__picture">
                             </a>
                             <h3 class="pic__title">Computer Hardware</h3>
                         </div>
                         <div class="portfolio__cell portfolio__img floating-block">
-                            <a href="img/CodeLearn_PhanMemMayTinh.png" target="_blank">
-                                <img src="img/CodeLearn_PhanMemMayTinh.png" alt="" class="pic portfolio__picture">
+                            <a href="img/certificates/CodeLearn_PhanMemMayTinh.png" target="_blank">
+                                <img src="img/certificates/CodeLearn_PhanMemMayTinh.png" alt="" class="pic portfolio__picture">
                             </a>
                             <h3 class="pic__title">Computer Software</h3>
                         </div>
@@ -370,226 +424,84 @@
             </div>
         </div>
     </section>
-    <!-- <section class="project part" id="project-section">
-        <div class="project__content">
-            <h4 class="heading-tertiary">PORTFOLIO</h4>
-            <h3 class="heading-secondary">LATEST WORKS</h3>
-            <div class="project__tab-btn">
-                <button id="all-btn" class="btn btn-tab port-btn  btn-tab--active"
-                    onclick="showProjectType(' all-project');">All</button>
-                <button id="web-btn" class="btn btn-tab port-btn"
-                    onclick="showProjectType(' website-project');">Website</button>
-                <button id="game-btn" class="btn btn-tab port-btn" onclick="showProjectType(' game-project');">Game</button>
-                <button id="others-btn" class="btn btn-tab port-btn"
-                    onclick="showProjectType(' others-project');">Others</button>
-            </div>
-            <div class="port-fillter__container">
-                <div class="port-fillter__cell  game-project card">
-                    <div class="card__inner floating-block">
-                        <div class="card__front">
-                            <img src="img/tetris.png" alt="" class="pic portfolio__picture">
-                            <h3 class="card__title ">Tetris</h3>
-                        </div>
-                        <div class="card__back">
-                            <h3 class="card__header">Tetris</h3>
-                            <p class="paragraph paragraph__justify">
-                                <br>
-                                Tools: HTML, CSS, JavaScript
-                                <br>
-                                <br>
-                                About: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis recusandae
-                                suscipit impedit et consectetur error, assumenda nulla sint iste numquam?
-                            </p>
-                            <a href="https://pika0546.github.io/tetris/" target="_blank">
-                                <span class="fas fa-hand-point-right"></span> Try now
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="port-fillter__cell others-project card">
-                    <div class="card__inner floating-block">
-                        <div class="card__front">
-                            <img src="img/calendar.png" alt="" class="pic portfolio__picture">
-                            <h3 class="card__title ">Calendar</h3>
-                        </div>
-                        <div class="card__back">
-                            <h3 class="card__header">Calendar</h3>
-                            <p class="paragraph paragraph__justify">
-                                <br>
-                                Tools: HTML, CSS, JavaScript
-                                <br>
-                                <br>
-                                About: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis recusandae
-                                suscipit impedit et consectetur error, assumenda nulla sint iste numquam?
-                            </p>
-                            <a href="https://pika0546.github.io/htmlCalendar/" target="_blank">
-                                <span class="fas fa-hand-point-right"></span> Try now
-
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="port-fillter__cell  game-project card">
-                    <div class="card__inner floating-block">
-                        <div class="card__front">
-                            <img src="img/2048.png" alt="" class="pic portfolio__picture">
-                            <h3 class="card__title ">2048</h3>
-                        </div>
-                        <div class="card__back">
-                            <h3 class="card__header">2048</h3>
-                            <p class="paragraph paragraph__justify">
-                                <br>
-                                Tools: HTML, CSS, JavaScript
-                                <br>
-                                <br>
-                                About: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis recusandae
-                                suscipit impedit et consectetur error, assumenda nulla sint iste numquam?
-                            </p>
-                            <a href="https://pika0546.github.io/my2048/" target="_blank">
-                                <span class="fas fa-hand-point-right"></span> Try now
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="port-fillter__cell game-project card">
-                    <div class="card__inner floating-block">
-                        <div class="card__front">
-                            <img src="img/pikachuGame.png" alt="" class="pic portfolio__picture">
-                            <h3 class="card__title ">Pikachu</h3>
-                        </div>
-                        <div class="card__back">
-                            <h3 class="card__header">Pikachu</h3>
-                            <p class="paragraph paragraph__justify">
-                                <br>
-                                Tools: HTML, CSS, JavaScript
-                                <br>
-                                <br>
-                                About: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis recusandae
-                                suscipit impedit et consectetur error, assumenda nulla sint iste numquam?
-                            </p>
-                            <a href="https://pika0546.github.io/pikachuGame/" target="_blank">
-                                <span class="fas fa-hand-point-right"></span> Try now
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="port-fillter__cell game-project card">
-                    <div class="card__inner floating-block">
-                        <div class="card__front">
-                            <img src="img/jumpingCube.png" alt="" class="pic portfolio__picture">
-                            <h3 class="card__title">Jumping Cube</h3>
-                        </div>
-                        <div class="card__back">
-                            <h3 class="card__header">Jump and Duck</h3>
-                            <p class="paragraph paragraph__justify">
-                                <br>
-                                Tools: HTML, CSS, JavaScript
-                                <br>
-                                <br>
-                                About: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis recusandae
-                                suscipit impedit et consectetur error, assumenda nulla sint iste numquam?
-                            </p>
-                            <a href="https://pika0546.github.io/jump-and-duck/" target="_blank">
-                                <span class="fas fa-hand-point-right"></span> Try now
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="port-fillter__cell game-project card">
-                    <div class="card__inner floating-block">
-                        <div class="card__front">
-                            <img src="img/gameSnake.png" alt="" class="pic portfolio__picture">
-                            <h3 class="card__title ">Snake The Game</h3>
-                        </div>
-                        <div class="card__back">
-                            <h3 class="card__header">Snake Game</h3>
-                            <p class="paragraph paragraph__justify">
-                                <br>
-                                Tools: C++
-                                <br>
-                                <br>
-                                About: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis recusandae
-                                suscipit impedit et consectetur error, assumenda nulla sint iste numquam?
-                            </p>
-                            <a href="https://www.youtube.com/watch?v=OfrRXK3a6pw&t=15s" target="_blank">
-                                <span class="fas fa-hand-point-right"></span> See now
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <section class="project part" id="project-section">
         <div class="project__content">
-            <h4 class="heading-tertiary">PORTFOLIO</h4>
+            <h4 class="heading-tertiary pink-text">PORTFOLIO</h4>
             <h3 class="heading-secondary">LATEST WORKS</h3>
             <div class="project__tab-btn">
-                <button id="all-btn" class="btn btn-tab port-btn  btn-tab--active"
+                <button id="all-btn" class="btn btn-tab port-btn pink-hover-text transparent-text"
                     onclick="showProjectType(' all-project');">All</button>
-                <button id="web-btn" class="btn btn-tab port-btn"
+                <button id="web-btn" class="btn btn-tab port-btn pink-hover-text transparent-text"
                     onclick="showProjectType(' website-project');">Website</button>
-                <button id="game-btn" class="btn btn-tab port-btn"
+                <button id="game-btn" class="btn btn-tab port-btn pink-hover-text transparent-text"
                     onclick="showProjectType(' game-project');">Game</button>
-                <button id="others-btn" class="btn btn-tab port-btn"
+                <button id="others-btn" class="btn btn-tab port-btn pink-hover-text transparent-text"
                     onclick="showProjectType(' others-project');">Others</button>
             </div>
             <div class="port-fillter__container">
-                <div class="port-fillter__cell  game-project floating-block" onclick="slideShow(0)">
-                    <img src="img/tetris.png" alt="" class="pic portfolio__picture">
-                    <h3 class="port-fillter__cell__title ">Tetris</h3>
+                <div class="port-fillter__cell  game-project floating-block pink-hover-bg" onclick="slideShow(0)">
+                    <img src="img/project/tetris.png" alt="" class="pic portfolio__picture">
+                    <h3 class="pic__title ">Tetris</h3>
                 </div>
-                <div class="port-fillter__cell others-project floating-block" onclick="slideShow(1)">
-                    <img src="img/calendar.png" alt="" class="pic portfolio__picture">
-                    <h3 class="port-fillter__cell__title ">Calendar</h3>
+                <div class="port-fillter__cell others-project floating-block pink-hover-bg" onclick="slideShow(1)">
+                    <img src="img/project/calendar.png" alt="" class="pic portfolio__picture">
+                    <h3 class="pic__title ">Calendar</h3>
 
                 </div>
-                <div class="port-fillter__cell  game-project floating-block" onclick="slideShow(2)">
-                    <img src="img/2048.png" alt="" class="pic portfolio__picture">
-                    <h3 class="port-fillter__cell__title ">2048</h3>
+                <div class="port-fillter__cell  game-project floating-block pink-hover-bg" onclick="slideShow(2)">
+                    <img src="img/project/2048.png" alt="" class="pic portfolio__picture">
+                    <h3 class="pic__title">2048</h3>
                 </div>
-                <div class="port-fillter__cell game-project floating-block" onclick="slideShow(3)">
-                    <img src="img/pikachuGame.png" alt="" class="pic portfolio__picture">
-                    <h3 class="port-fillter__cell__title ">Pikachu</h3>
+                <div class="port-fillter__cell game-project floating-block pink-hover-bg" onclick="slideShow(3)">
+                    <img src="img/project/pikachuGame.png" alt="" class="pic portfolio__picture">
+                    <h3 class="pic__title">Pikachu</h3>
 
                 </div>
-                <div class="port-fillter__cell game-project floating-block" onclick="slideShow(4)">
-                    <img src="img/jumpingCube.png" alt="" class="pic portfolio__picture">
-                    <h3 class="port-fillter__cell__title">Jumping Cube</h3>
+                <div class="port-fillter__cell game-project floating-block pink-hover-bg" onclick="slideShow(4)">
+                    <img src="img/project/jumpingCube.png" alt="" class="pic portfolio__picture">
+                    <h3 class="pic__title">Jumping Cube</h3>
                 </div>
-                <div class="port-fillter__cell game-project floating-block" onclick="slideShow(5)">
-                    <img src="img/gameSnake.png" alt="" class="pic portfolio__picture">
-                    <h3 class="port-fillter__cell__title ">Snake The Game</h3>
+                <div class="port-fillter__cell game-project floating-block pink-hover-bg" onclick="slideShow(5)">
+                    <img src="img/project/gameSnake.png" alt="" class="pic portfolio__picture">
+                    <h3 class="pic__title">Snake The Game</h3>
+                </div>
+                <div class="port-fillter__cell web-project floating-block pink-hover-bg" onclick="slideShow(6)">
+                    <img src="img/project/watchPage.png" alt="" class="pic portfolio__picture">
+                    <h3 class="pic__title">Watch Selling</h3>
+                </div>
+                <div class="port-fillter__cell web-project floating-block pink-hover-bg" onclick="slideShow(7)">
+                    <img src="img/project/oldPersonal.png" alt="" class="pic portfolio__picture">
+                    <h3 class="pic__title">Personal WebPage 1</h3>
+                </div>
+                <div class="port-fillter__cell web-project floating-block pink-hover-bg" onclick="slideShow(8)">
+                    <img src="img/project/personalWeb2.png" alt="" class="pic portfolio__picture">
+                    <h3 class="pic__title">Personal WebPage 2</h3>
                 </div>
             </div>
         </div>
     </section>
+
     <section class="contact part" id="contact-section">
         <div class="contact__content">
-            <h4 class="heading-tertiary">CONTACT</h4>
+            <h4 class="heading-tertiary  pink-text">CONTACT</h4>
             <h3 class="heading-secondary">GET IN TOUCH</h3>
             <div class="contact__info">
                 <div class="floating-block contact__info__cell ">
-                    <span class="fas fa-phone contact__icon"></span>
+                    <span class="fas fa-phone contact__icon pink-text"></span>
                     <h4 class="contact__info__heading">Phone</h4>
                     <p class="contact__info--info">0342897xxx</p>
                 </div>
                 <div class="contact__info__cell floating-block">
-                    <span class="fas fa-envelope contact__icon"></span>
+                    <span class="fas fa-envelope contact__icon pink-text"></span>
                     <h4 class="contact__info__heading">Email</h4>
                     <p class="contact__info--info">kthedestroy@gmail.com</p>
                 </div>
                 <div class="contact__info__cell floating-block">
-                    <span class="fab fa-github contact__icon"></span>
+                    <span class="fab fa-github contact__icon pink-text"></span>
                     <h4 class="contact__info__heading">Github</h4>
                     <p class="contact__info--info">
-                        <a href="https://github.com/Pika0546">
+                        <a href="https://github.com/Pika0546 pink-hover-text">
                             Pika0546
                         </a>
                     </p>
@@ -621,7 +533,7 @@
                         </div>
                     </div>
                     <input type="submit" value="Send message"
-                        class="btn btn-pink send-btn floating-block floating-block-hover" disabled>
+                        class="btn btn-mg-t pink-text send-btn floating-block floating-block-hover" disabled>
                 </form>
             </div>
         </div>
@@ -650,15 +562,16 @@
 
         </div>
     </section>
+
     <section class="project-details" id="project-details-section">
         <div class="project-details__content">
             <div class="slide">
                 <div class="slide__container">
                     <div class="slide__content">
                         <div class="slide__header">
-                            <h3 class="slide__name">Tetris</h3>
+                            <h3 class="slide__name pink-text">Tetris</h3>
                             <h4 class="slide__category"><span>Category</span> - Game</h4>
-                            <p class="slide__number">1/7</p>
+                            <p class="slide__number">1/9</p>
                         </div>
                         <div class="slide__detail">
                             <div class="slide__brief">
@@ -678,16 +591,15 @@
                                 <p class="paragraph"> <span>Date - </span>2020</p>
                                 <p class="paragraph"> <span>Author - </span>Me</p>
                                 <p class="paragraph"> <span>Tools - </span>HTML, CSS, JavaScript</p>
-                                <p class="paragraph"> <span>Link - </span><a href="https://pika0546.github.io/tetris/"
-                                        target="_blank">pika0546/github.io/testris</a></p>
+                                
                             </div>
                         </div>
                         <div class="slide__project">
                             <div class="slide__project__picture">
-                                <img src="img/tetrisIframe.png" alt="">
+                                <img src="img/project/tetrisIframe.png" alt="">
                                 <div class="slide__link">
-                                    <i class="fas fa-hand-point-right slide__pointer"></i>
-                                    <a href="https://pika0546.github.io/tetris/"
+                                    <i class="fas fa-hand-point-right slide__pointer pink-text"></i>
+                                    <a class="pink-text" href="https://pika0546.github.io/tetris/"
                                     target="_blank">See now</a>
                                 </div>
                             </div>
@@ -698,9 +610,9 @@
                 <div class="slide__container">
                     <div class="slide__content">
                         <div class="slide__header">
-                            <h3 class="slide__name">Calendar</h3>
+                            <h3 class="slide__name pink-text">Calendar</h3>
                             <h4 class="slide__category"><span>Category</span> - Others</h4>
-                            <p class="slide__number">2/7</p>
+                            <p class="slide__number">2/9</p>
                         </div>
                         <div class="slide__detail">
                             <div class="slide__brief">
@@ -720,16 +632,15 @@
                                 <p class="paragraph"> <span>Date - </span>2020</p>
                                 <p class="paragraph"> <span>Author - </span>Me</p>
                                 <p class="paragraph"> <span>Tools - </span>HTML, CSS, JavaScript</p>
-                                <p class="paragraph"> <span>Link - </span><a href="https://pika0546.github.io/calendar/"
-                                        target="_blank">pika0546.github.io/calendar</a></p>
+                                
                             </div>
                         </div>
                         <div class="slide__project">
                             <div class="slide__project__picture">
-                                <img src="img/calendarIframe.png" alt="">
+                                <img src="img/project/calendarIframe.png" alt="">
                                 <div class="slide__link">
-                                    <i class="fas fa-hand-point-right slide__pointer"></i>
-                                    <a href="https://pika0546.github.io/calendar/"
+                                    <i class="fas fa-hand-point-right slide__pointer pink-text"></i>
+                                    <a class="pink-text" href="https://pika0546.github.io/htmlCalendar/"
                                     target="_blank">See now</a>
                                 </div>
                             </div>
@@ -740,9 +651,9 @@
                 <div class="slide__container">
                     <div class="slide__content">
                         <div class="slide__header">
-                            <h3 class="slide__name">2048</h3>
+                            <h3 class="slide__name pink-text">2048</h3>
                             <h4 class="slide__category"><span>Category</span> - Game</h4>
-                            <p class="slide__number">3/7</p>
+                            <p class="slide__number">3/9</p>
                         </div>
                         <div class="slide__detail">
                             <div class="slide__brief">
@@ -762,16 +673,15 @@
                                 <p class="paragraph"> <span>Date - </span>2020</p>
                                 <p class="paragraph"> <span>Author - </span>Me</p>
                                 <p class="paragraph"> <span>Tools - </span>HTML, CSS, JavaScript</p>
-                                <p class="paragraph"> <span>Link - </span><a href="https://pika0546.github.io/my2048/"
-                                        target="_blank">pika0546.github.io/my2048</a></p>
+                               
                             </div>
                         </div>
                         <div class="slide__project">
                             <div class="slide__project__picture">
-                                <img src="img/2048Iframe.png" alt="">
+                                <img src="img/project/2048Iframe.png" alt="">
                                 <div class="slide__link">
-                                    <i class="fas fa-hand-point-right slide__pointer"></i>
-                                    <a href="https://pika0546.github.io/my2048/"
+                                    <i class="fas fa-hand-point-right slide__pointer pink-text"></i>
+                                    <a class="pink-text" href="https://pika0546.github.io/my2048/"
                                     target="_blank">See now</a>
                                 </div>
                             </div>
@@ -779,13 +689,12 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="slide__container">
                     <div class="slide__content">
                         <div class="slide__header">
-                            <h3 class="slide__name">Pikachu</h3>
+                            <h3 class="slide__name pink-text">Pikachu</h3>
                             <h4 class="slide__category"><span>Category</span> - Game</h4>
-                            <p class="slide__number">4/7</p>
+                            <p class="slide__number">4/9</p>
                         </div>
                         <div class="slide__detail">
                             <div class="slide__brief">
@@ -805,16 +714,15 @@
                                 <p class="paragraph"> <span>Date - </span>2020</p>
                                 <p class="paragraph"> <span>Author - </span>Me</p>
                                 <p class="paragraph"> <span>Tools - </span>HTML, CSS, JavaScript</p>
-                                <p class="paragraph"> <span>Link - </span><a href="https://pika0546.github.io/pikachuGame/"
-                                        target="_blank">pika0546.github.io/pikachuGame</a></p>
+                                
                             </div>
                         </div>
                         <div class="slide__project">
                             <div class="slide__project__picture">
-                                <img src="img/pikachuIframe.png" alt="">
+                                <img src="img/project/pikachuIframe.png" alt="">
                                 <div class="slide__link">
-                                    <i class="fas fa-hand-point-right slide__pointer"></i>
-                                    <a href="https://pika0546.github.io/pikachuGame/"
+                                    <i class="fas fa-hand-point-right slide__pointer pink-text"></i>
+                                    <a class="pink-text" href="https://pika0546.github.io/pikachuGame/"
                                     target="_blank">See now</a>
                                 </div>
                             </div>
@@ -825,9 +733,9 @@
                 <div class="slide__container">
                     <div class="slide__content">
                         <div class="slide__header">
-                            <h3 class="slide__name">Jumping Cube</h3>
+                            <h3 class="slide__name pink-text">Jumping Cube</h3>
                             <h4 class="slide__category"><span>Category</span> - Game</h4>
-                            <p class="slide__number">5/6</p>
+                            <p class="slide__number">5/9</p>
                         </div>
                         <div class="slide__detail">
                             <div class="slide__brief">
@@ -847,30 +755,28 @@
                                 <p class="paragraph"> <span>Date - </span>2020</p>
                                 <p class="paragraph"> <span>Author - </span>Me</p>
                                 <p class="paragraph"> <span>Tools - </span>HTML, CSS, JavaScript</p>
-                                <p class="paragraph"> <span>Link - </span><a href="https://pika0546.github.io/jump-and-duck/"
-                                        target="_blank">pika0546.github.io/jump-and-duck</a></p>
+                                
                             </div>
                         </div>
                         <div class="slide__project">
                             <div class="slide__project__picture">
-                                <img src="img/jumpingCubeIframe.png" alt="">
+                                <img src="img/project/jumpingCubeIframe.png" alt="">
                                 <div class="slide__link">
-                                    <i class="fas fa-hand-point-right slide__pointer"></i>
-                                    <a href="https://pika0546.github.io/jump-and-duck/"
+                                    <i class="fas fa-hand-point-right slide__pointer pink-text"></i>
+                                    <a class="pink-text" href="https://pika0546.github.io/jump-and-duck/"
                                     target="_blank">See now</a>
                                 </div>
                             </div>
-                            <iframe src="https://pika0546.github.io/tetris/" frameborder="0" allowfullscreen
-                                width="100%" height="600"></iframe>
+
                         </div>
                     </div>
                 </div>
                 <div class="slide__container">
                     <div class="slide__content">
                         <div class="slide__header">
-                            <h3 class="slide__name">Snake the Game</h3>
+                            <h3 class="slide__name pink-text">Snake the Game</h3>
                             <h4 class="slide__category"><span>Category</span> - Game</h4>
-                            <p class="slide__number">4/7</p>
+                            <p class="slide__number">6/9</p>
                         </div>
                         <div class="slide__detail">
                             <div class="slide__brief">
@@ -890,31 +796,146 @@
                                 <p class="paragraph"> <span>Date - </span>2020</p>
                                 <p class="paragraph"> <span>Author - </span>Me</p>
                                 <p class="paragraph"> <span>Tools - </span>C++</p>
-                                <p class="paragraph"> <span>Link - </span><a href="https://www.youtube.com/watch?v=OfrRXK3a6pw&t=15s"
-                                        target="_blank">Youtube</a></p>
+                               
                             </div>
                         </div>
                         <div class="slide__project">
                             <div class="slide__project__picture">
-                                <img src="img/gameSnakeIframe.png" alt="">
+                                <img src="img/project/gameSnakeIframe.png" alt="">
                                 <div class="slide__link">
-                                    <i class="fas fa-hand-point-right slide__pointer"></i>
-                                    <a href="https://www.youtube.com/watch?v=OfrRXK3a6pw&t=15s"
+                                    <i class="fas fa-hand-point-right slide__pointer pink-text"></i>
+                                    <a class="pink-text" href="https://www.youtube.com/watch?v=OfrRXK3a6pw&t=15s"
                                     target="_blank">See now</a>
                                 </div>
                             </div>
-                            <iframe src="https://pika0546.github.io/tetris/" frameborder="0" allowfullscreen
-                                width="100%" height="600"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide__container">
+                    <div class="slide__content">
+                        <div class="slide__header">
+                            <h3 class="slide__name pink-text">Watch Selling</h3>
+                            <h4 class="slide__category"><span>Category</span> - Website</h4>
+                            <p class="slide__number">7/9</p>
+                        </div>
+                        <div class="slide__detail">
+                            <div class="slide__brief">
+                                <h4 class="slide__brief__header">
+                                    Project Brief
+                                </h4>
+                                <p class="paragraph paragraph__justify">
+                                   This is a Watch Selling website, I coded this page on a tutorial of WebShala on youtube to practice my Bootstrap 4 skill.
+
+                                </p>
+                            </div>
+                            <div class="slide__info">
+                                <h4 class="slide__brief__header">
+                                    Project Info
+                                </h4>
+                                <p class="paragraph"> <span>Date - </span>2020</p>
+                                <p class="paragraph"> <span>Author - </span>The WebShala</p>
+                                <p class="paragraph"> <span>Tools - </span>HTML, CSS, JavaScript</p>
+                                
+                            </div>
+                        </div>
+                        <div class="slide__project">
+                            <div class="slide__project__picture">
+                                <img src="img/project/watchPageIframe.png" alt="">
+                                <div class="slide__link">
+                                    <i class="fas fa-hand-point-right slide__pointer pink-text"></i>
+                                    <a class="pink-text" href="https://pika0546.github.io/shala-watch-selling/"
+                                    target="_blank">See now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide__container">
+                    <div class="slide__content">
+                        <div class="slide__header">
+                            <h3 class="slide__name pink-text">Personal WebPage 1</h3>
+                            <h4 class="slide__category"><span>Category</span> - Website</h4>
+                            <p class="slide__number">8/9</p>
+                        </div>
+                        <div class="slide__detail">
+                            <div class="slide__brief">
+                                <h4 class="slide__brief__header">
+                                    Project Brief
+                                </h4>
+                                <p class="paragraph paragraph__justify">
+                                    This is my very first Personal Website, I finished it 3 months ago, this page has some information about me, it also instroduces some of my projects.
+                                </p>
+                            </div>
+                            <div class="slide__info">
+                                <h4 class="slide__brief__header">
+                                    Project Info
+                                </h4>
+                                <p class="paragraph"> <span>Date - </span>2020</p>
+                                <p class="paragraph"> <span>Author - </span>Me</p>
+                                <p class="paragraph"> <span>Tools - </span>HTML, CSS, JavaScript</p>
+                               
+                            </div>
+                        </div>
+                        <div class="slide__project">
+                            <div class="slide__project__picture">
+                                <img src="img/project/oldPersonalIframe.png" alt="">
+                                <div class="slide__link">
+                                    <i class="fas fa-hand-point-right slide__pointer pink-text"></i>
+                                    <a class="pink-text" href="https://pika0546.github.io"
+                                    target="_blank">See now</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <button class="slide__move" id="next-slide"> <i class="fas fa-angle-right"></i> </button>
-                <button class="slide__move" id="prev-slide"> <i class="fas fa-angle-left"></i> </button>
-                <button class="slide__close floating-block" id="close-slide" onclick="closeSlideShow()"> <i class="fas fa-times"></i> </button>
+                <div class="slide__container">
+                    <div class="slide__content">
+                        <div class="slide__header">
+                            <h3 class="slide__name pink-text">Personal WebPage 1</h3>
+                            <h4 class="slide__category"><span>Category</span> - Website</h4>
+                            <p class="slide__number">9/9</p>
+                        </div>
+                        <div class="slide__detail">
+                            <div class="slide__brief">
+                                <h4 class="slide__brief__header">
+                                    Project Brief
+                                </h4>
+                                <p class="paragraph paragraph__justify">
+                                   This is my present personal website, this website contains my basic information(my skill, my experience, my education).
+                                   it also instroduces all of my projects which I have finished and been working on since I began to study Web Development.
+                                </p>
+                            </div>
+                            <div class="slide__info">
+                                <h4 class="slide__brief__header">
+                                    Project Info
+                                </h4>
+                                <p class="paragraph"> <span>Date - </span>2020</p>
+                                <p class="paragraph"> <span>Author - </span>Me</p>
+                                <p class="paragraph"> <span>Tools - </span>HTML, CSS, JavaScript</p>
+                               
+                            </div>
+                        </div>
+                        <div class="slide__project">
+                            <div class="slide__project__picture">
+                                <img src="img/project/personalWeb2Iframe.png" alt="">
+                                <div class="slide__link">
+                                    <i class="fas fa-hand-point-right slide__pointer pink-text"></i>
+                                    <a class="pink-text" href="https://pika0546.github.io/le-tran-dang-khoa/"
+                                    target="_blank">See now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="slide__move pink-text" id="next-slide"> <i class="fas fa-angle-right"></i> </button>
+                <button class="slide__move pink-text" id="prev-slide"> <i class="fas fa-angle-left"></i> </button>
+                <button class="slide__close floating-block pink-hover-text" id="close-slide" onclick="closeSlideShow()"> <i class="fas fa-times"></i> </button>
             </div>
         </div>
     </section>
+
     <script type="text/javascript" src="script/main.js"></script>
 
 </body>
