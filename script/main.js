@@ -110,11 +110,11 @@ var prevSlideBtn = document.getElementById("prev-slide");
 
 nextSlideBtn.addEventListener("click",function(){
     plusSlide(1);
-    console.log(slideIndex);
+    
 })
 
 prevSlideBtn.addEventListener("click",function(){
-    plusSlide(-1);console.log(slideIndex);
+    plusSlide(-1);
 })
 
 
@@ -247,13 +247,13 @@ $(document).ready(function () {
    }
    $(".scrolltop").fadeOut(00);
    $(window).scroll(()=>{
-       console.log($(window).scrollTop())
+      
        if($(window).scrollTop() > 20){
-           console.log("O")
+          
            $(".scrolltop").fadeIn(200);
        }
        else{
-            console.log("1")
+           
             $(".scrolltop").fadeOut(200);
        }
    })
