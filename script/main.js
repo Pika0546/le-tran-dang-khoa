@@ -39,37 +39,38 @@ for (var i = 0; i < portBtns.length; i++) {
     })
 }
 
-var infoBtns = document.getElementsByClassName("info-btn");
-for (var i = 0; i < infoBtns.length; i++) {
-    infoBtns[i].addEventListener("click", function () {
-        for (var j = 0; j < infoBtns.length; j++) {
-            infoBtns[j].className = infoBtns[j].className.replace(" btn-tab--active", "");
-            infoBtns[j].className = infoBtns[j].className.replace("pink-text", "transparent-text" );
-            infoBtns[j].className = infoBtns[j].className.replace("blue-text", "transparent-text");
-            infoBtns[j].className = infoBtns[j].className.replace("red-text","transparent-text");
-            infoBtns[j].className = infoBtns[j].className.replace("yellow-text", "transparent-text");
-            infoBtns[j].className = infoBtns[j].className.replace("green-text","transparent-text");
+// var infoBtns = document.getElementsByClassName("info-btn");
+// for (var i = 0; i < infoBtns.length; i++) {
+//     infoBtns[i].addEventListener("click", function () {
+//         for (var j = 0; j < infoBtns.length; j++) {
+//             infoBtns[j].className = infoBtns[j].className.replace(" btn-tab--active", "");
+//             infoBtns[j].className = infoBtns[j].className.replace("pink-text", "transparent-text" );
+//             infoBtns[j].className = infoBtns[j].className.replace("blue-text", "transparent-text");
+//             infoBtns[j].className = infoBtns[j].className.replace("red-text","transparent-text");
+//             infoBtns[j].className = infoBtns[j].className.replace("yellow-text", "transparent-text");
+//             infoBtns[j].className = infoBtns[j].className.replace("green-text","transparent-text");
 
-        }
-        this.className += " btn-tab--active";
-        this.className = this.className.replace("pink-text", activeColor + "-text");
-        this.className = this.className.replace("transparent", activeColor);
-        this.className = this.className.replace("blue-text", activeColor + "-text");
-        this.className = this.className.replace("red-text", activeColor + "-text");
-        this.className = this.className.replace("yellow-text", activeColor + "-text");
-        this.className = this.className.replace("green-text", activeColor + "-text");
-    })
-}
-function showInfo (type) {
-    var infos = $(".more-info-container");
-    for (var i = 0; i < infos.length; i++) {
-        if ($(infos[i]).attr("id").indexOf(type) <= -1) {
-            $(infos[i]).fadeOut(0);
-        }
-    }
-    console.log(type);
-    $("#" + type).fadeIn(0);
-}
+//         }
+//         this.className += " btn-tab--active";
+//         this.className = this.className.replace("pink-text", activeColor + "-text");
+//         this.className = this.className.replace("transparent", activeColor);
+//         this.className = this.className.replace("blue-text", activeColor + "-text");
+//         this.className = this.className.replace("red-text", activeColor + "-text");
+//         this.className = this.className.replace("yellow-text", activeColor + "-text");
+//         this.className = this.className.replace("green-text", activeColor + "-text");
+//     })
+// }
+
+// function showInfo (type) {
+//     var infos = $(".more-info-container");
+//     for (var i = 0; i < infos.length; i++) {
+//         if ($(infos[i]).attr("id").indexOf(type) <= -1) {
+//             $(infos[i]).fadeOut(0);
+//         }
+//     }
+//     console.log(type);
+//     $("#" + type).fadeIn(0);
+// }
 
 function showProjectType(type) {
  
@@ -78,20 +79,24 @@ function showProjectType(type) {
     var cells = $(".port-fillter__cell");
     for (var i = 0; i < cells.length; i++) {
         if ($(cells[i]).attr("class").indexOf(type) <= -1) {
-            // $(cells[i]).addClass("cell-show");
-            $(cells[i]).fadeOut(0);
+            $(cells[i]).addClass("hide-ele");
+            $(cells[i]).removeClass("ani")
+            // $(cells[i]).fadeOut(300);
         }
     }
     for (var i = 0; i < cells.length; i++) {
         if ($(cells[i]).attr("class").indexOf(type) > -1) {
-            // $(cells[i]).addClass("cell-show");
-            $(cells[i]).fadeIn(0);
+            $(cells[i]).removeClass("hide-ele");
+            if(type !== ""){
+                $(cells[i]).addClass("ani");
+            }
+            // $(cells[i]).fadeIn(500);
         }
     }
 }
 
 document.getElementById("all-btn").click();
-document.getElementById("skill-btn").click();
+// document.getElementById("skill-btn").click();
 var slideIndex = 0;
 var slides = document.getElementsByClassName("slide__container");
 
@@ -188,13 +193,13 @@ function showSlide(n) {
 function slideShow(n){
     slideIndex = n;
     $("#project-details-section").fadeIn(200);
-    $(".part").fadeOut(0);
+    // $(".part").fadeOut(0);
     showSlide(slideIndex);
 }
 
 function closeSlideShow () {
     $("#project-details-section").fadeOut(0);
-    $("#project-section").fadeIn(0);
+    // $("#project-section").fadeIn(0);
 
 }
 
@@ -222,39 +227,35 @@ $(document).ready(function () {
         $(".style-switcher").toggleClass("open")
     })
 
-    function moveToSection(des) {
-        $(".part").fadeOut(0);
-        $(des).fadeIn(300);
-    }
-    $(".part").hide();
+    // function moveToSection(des) {
+    //     $(".part").fadeOut(0);
+    //     $(des).fadeIn(300);
+    // }
+    // $(".part").hide();
 
     $("#loader").animate({
         height: '0'
-    }, 5000);
+    }, 2000);
 
     $(".navigation__link").click(function () {
-        moveToSection("#" + $(this).attr("id") + "-section");
+        // moveToSection("#" + $(this).attr("id") + "-section");
         navBtn.click();
     })
 
-    $("#header-section").fadeIn(1000);
-    // $("#project-details-section").fadeIn(600);
-    $("#talk-to-me-btn").click(function () {
-        $("#about-section").fadeOut(300);
-        $("#contact-section").fadeIn(300);
-    })
-    $("#more-about-me").click(function () {
-        $("#header-section").fadeOut(300);
-        $("#about-section").fadeIn(300);
-    })
-    $("#my-work-btn").click(function () {
-        $("#about-section").fadeOut(300);
-        $("#project-section").fadeIn(300);
-    })
-    $("#home-icon").click(function () {
-        $(".part").fadeOut(300);
-        $("#header-section").fadeIn(300);
-    })
-
+   scrollToTop=()=>{
+    window.scrollTo(0, 0);
+   }
+   $(".scrolltop").fadeOut(00);
+   $(window).scroll(()=>{
+       console.log($(window).scrollTop())
+       if($(window).scrollTop() > 20){
+           console.log("O")
+           $(".scrolltop").fadeIn(200);
+       }
+       else{
+            console.log("1")
+            $(".scrolltop").fadeOut(200);
+       }
+   })
 })
 
