@@ -1126,7 +1126,12 @@
 
     <script type="text/javascript" src="script/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
+    <script>AOS.init({
+        disable: function () {
+            let maxWidth = 800;
+            return window.innerWidth < maxWidth;
+        }
+    });</script>
 </body>
 
 </html>
