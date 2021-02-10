@@ -1088,7 +1088,8 @@ iframe[seamless] {
 
 .loader__shape {
   display: grid;
-  grid-template-columns: auto auto auto auto; }
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 1rem; }
 
 .loader__square {
   width: 4rem;
