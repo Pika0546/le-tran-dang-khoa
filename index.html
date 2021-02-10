@@ -18,6 +18,11 @@
     <div class="moving-circle randomly-shape"></div>
     <div class="moving-triangle randomly-shape"></div>
     <div class="moving-pixel-heart randomly-shape"></div>
+    <div class="moving-heart randomly-shape">
+        <div class="heart">
+            
+        </div>
+    </div>
     <div class="moving-square randomly-shape"></div>
     <div class="moving-special-circle randomly-shape">
         <div class="moving-special-circle__code"></div>
@@ -69,6 +74,7 @@
 			<li class="main-green" style="background-color: #1fc586" onclick="setActiveStyle('green')"></li>
 			<li class="main-blue" style="background-color: #2eb1ed" onclick="setActiveStyle('blue')"></li>
 			<li class="main-red" style="background-color: #cc3a3b" onclick="setActiveStyle('red')"></li>
+            <li class="main-cyan" style="background-color: cyan" onclick="setActiveStyle('cyan')"></li>
 		</ul>
 	</div>
 
@@ -283,16 +289,12 @@
                             class="social-media-icon floating-block floating-block-hover">
                             <span class="fab fa-facebook-f"></span>
                         </a>
-                        <!-- <a href="#" class="social-media-icon floating-block floating-block-hover">
-                            <span class="fab fa-twitter"></span>
-                        </a> -->
+                       
                         <a href="https://github.com/Pika0546"
                             class="social-media-icon floating-block floating-block-hover">
                             <span class="fab fa-github"></span>
                         </a>
-                        <!-- <a href="#" class="social-media-icon floating-block floating-block-hover">
-                            <span class="fab fa-instagram"></span>
-                        </a> -->
+                        
                     </div>
                 </div>
                 <div class="about__base-info--2">
@@ -305,17 +307,9 @@
                         Coding.
                     </p>
                     <div class="about__base-info--2__button">
-                        <button data-aos="fade-down-right" class="about__base-info--btn btn floating-block btn-mg-t floating-block-hover pink-text">
+                        <a data-aos="fade-down-right" href="https://drive.google.com/file/d/1k859L3zYlCpEiQNdPfU0i8y0xHCiQEcy/view?usp=sharing" class="about__base-info--btn btn floating-block btn-mg-t floating-block-hover pink-text">
                             Download CV
-                        </button>
-                        <!-- <button data-aos="fade-down" id="talk-to-me-btn"
-                            class="about__base-info--btn btn floating-block btn-mg-t floating-block-hover pink-text">
-                            Talk to me
-                        </button>
-                        <button data-aos="fade-down-left" class="about__base-info--btn btn floating-block btn-mg-t floating-block-hover pink-text"
-                            id="my-work-btn">
-                            See my works
-                        </button> -->
+                        </a>
                         <a data-aos="fade-down" href="#contact-section" class="about__base-info--btn btn floating-block btn-mg-t floating-block-hover pink-text">Talk to me</a>
                         <a data-aos="fade-down-left" href="#project-section" class="about__base-info--btn btn floating-block btn-mg-t floating-block-hover pink-text">See my works</a>
                     </div>
@@ -613,29 +607,48 @@
                 </div>
             </div>
             <div class="contact__form--container">
-                <form action="https://formspree.io/f/xeqpdwdr" method="POST" class="contact__form--form">
+                <form name="myForm" action="https://formspree.io/f/xeqpdwdr" method="POST" class="contact__form--form" onsubmit="return validateForm()">
                     <div class="contact__form--input">
                         <div  class="guest-info">
-                            <div data-aos="zoom-out-up" class="form__input floating-block">
-                                <label for="fname">Name:</label>
-                                <input type="text" id="fname" name="name" autocomplete="off" required="required">
+                           <div class="form-group">
+                                <div data-aos="zoom-out-up" class="form__input floating-block">
+                                    <label for="fname">Name:</label>
+                                    <input type="text" id="fname" name="name" autocomplete="off" >
+                                </div>
+                                <p class="error-message" id="invalid-name">Name can not be empty</p>
+                           </div>
+
+                            <div class="form-group">
+                                <div data-aos="zoom-out-up" class="form__input floating-block">
+                                    <label for="fmail">Email:</label>
+                                    <input type="text" id="fmail" name="mail" autocomplete="off" >
+                                </div>
+                                <p class="error-message" id="invalid-mail">Invalid email</p>
                             </div>
-                            <div data-aos="zoom-out-up" class="form__input floating-block">
-                                <label for="fmail">Email:</label>
-                                <input type="text" id="fmail" name="mail" autocomplete="off" required="required">
+
+                            <div class="form-group">
+                                <div data-aos="zoom-out-up" class="form__input floating-block">
+                                    <label for="fsubject">Subject:</label>
+                                    <input type="text" id="fsubject" name="subject" autocomplete="off">
+                                </div>
+                                <p class="error-message" id="invalid-subject">Subject can not be empty</p>
                             </div>
-                            <div data-aos="zoom-out-up" class="form__input floating-block">
-                                <label for="fsubject">Subject:</label>
-                                <input type="text" id="fsubject" name="subject" autocomplete="off" required="required">
-                            </div>
+
                         </div>
-                        <div data-aos="zoom-out-up" class="form__input floating-block contact__message">
-                            <label for="fmessage">Message</label>
-                            <textarea id="fsubject" name="subject" rows="5" required="required" ></textarea>
-                        </div>
+                       <div class="form-group">
+                            <div data-aos="zoom-out-up" class="form__input floating-block contact__message">
+                                <label for="fmessage">Message</label>
+                                <textarea id="fmessage" name="message" rows="5" ></textarea>
+                            </div>
+                            <p class="error-message" id="invalid-message">Message can not be empty</p>
+                       </div>
+
                     </div>
-                    <input  type="submit" value="Send message"
-                        class="btn btn-mg-t pink-text send-btn floating-block floating-block-hover" >
+                    <input  
+                        type="submit" 
+                        value="Send message"
+                        class="btn btn-mg-t pink-text send-btn floating-block floating-block-hover" 
+                    >
                 </form>
             </div>
        

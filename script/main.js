@@ -27,6 +27,7 @@ for (var i = 0; i < portBtns.length; i++) {
             portBtns[j].className = portBtns[j].className.replace("red-text","transparent-text");
             portBtns[j].className = portBtns[j].className.replace("yellow-text", "transparent-text");
             portBtns[j].className = portBtns[j].className.replace("green-text","transparent-text");
+            portBtns[j].className = portBtns[j].className.replace("cyan-text","transparent-text");
 
         }
         this.className += " btn-tab--active";
@@ -36,41 +37,9 @@ for (var i = 0; i < portBtns.length; i++) {
         this.className = this.className.replace("red-text", activeColor + "-text");
         this.className = this.className.replace("yellow-text", activeColor + "-text");
         this.className = this.className.replace("green-text", activeColor + "-text");
+        this.className = this.className.replace("cyan-text", activeColor + "-text");
     })
 }
-
-// var infoBtns = document.getElementsByClassName("info-btn");
-// for (var i = 0; i < infoBtns.length; i++) {
-//     infoBtns[i].addEventListener("click", function () {
-//         for (var j = 0; j < infoBtns.length; j++) {
-//             infoBtns[j].className = infoBtns[j].className.replace(" btn-tab--active", "");
-//             infoBtns[j].className = infoBtns[j].className.replace("pink-text", "transparent-text" );
-//             infoBtns[j].className = infoBtns[j].className.replace("blue-text", "transparent-text");
-//             infoBtns[j].className = infoBtns[j].className.replace("red-text","transparent-text");
-//             infoBtns[j].className = infoBtns[j].className.replace("yellow-text", "transparent-text");
-//             infoBtns[j].className = infoBtns[j].className.replace("green-text","transparent-text");
-
-//         }
-//         this.className += " btn-tab--active";
-//         this.className = this.className.replace("pink-text", activeColor + "-text");
-//         this.className = this.className.replace("transparent", activeColor);
-//         this.className = this.className.replace("blue-text", activeColor + "-text");
-//         this.className = this.className.replace("red-text", activeColor + "-text");
-//         this.className = this.className.replace("yellow-text", activeColor + "-text");
-//         this.className = this.className.replace("green-text", activeColor + "-text");
-//     })
-// }
-
-// function showInfo (type) {
-//     var infos = $(".more-info-container");
-//     for (var i = 0; i < infos.length; i++) {
-//         if ($(infos[i]).attr("id").indexOf(type) <= -1) {
-//             $(infos[i]).fadeOut(0);
-//         }
-//     }
-//     console.log(type);
-//     $("#" + type).fadeIn(0);
-// }
 
 function showProjectType(type) {
  
@@ -81,7 +50,7 @@ function showProjectType(type) {
         if ($(cells[i]).attr("class").indexOf(type) <= -1) {
             $(cells[i]).addClass("hide-ele");
             $(cells[i]).removeClass("ani")
-            // $(cells[i]).fadeOut(300);
+           
         }
     }
     for (var i = 0; i < cells.length; i++) {
@@ -90,13 +59,12 @@ function showProjectType(type) {
             if(type !== ""){
                 $(cells[i]).addClass("ani");
             }
-            // $(cells[i]).fadeIn(500);
+           
         }
     }
 }
 
 document.getElementById("all-btn").click();
-// document.getElementById("skill-btn").click();
 var slideIndex = 0;
 var slides = document.getElementsByClassName("slide__container");
 
@@ -193,13 +161,11 @@ function showSlide(n) {
 function slideShow(n){
     slideIndex = n;
     $("#project-details-section").fadeIn(200);
-    // $(".part").fadeOut(0);
     showSlide(slideIndex);
 }
 
 function closeSlideShow () {
     $("#project-details-section").fadeOut(0);
-    // $("#project-section").fadeIn(0);
 
 }
 
@@ -211,6 +177,57 @@ function replaceDefaultStyle(curr, next){
 
 }
 
+function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+validateForm =()=>{
+    let name = document.forms["myForm"]["name"].value;
+    let email = document.forms["myForm"]["mail"].value;
+    let sub = document.forms["myForm"]["subject"].value;
+    let mess = document.forms["myForm"]["message"].value;
+    let flag = true;
+    if(name === ""){
+        flag = false;
+        document.getElementById("invalid-name").style.display="block";
+    }
+    else{
+        document.getElementById("invalid-name").style.display="none";
+    }
+
+    if(!validateEmail(email)){
+        flag = false;
+        document.getElementById("invalid-mail").style.display="block";
+    }
+    else{
+        document.getElementById("invalid-mail").style.display="none";
+    }
+
+    if(sub === ""){
+        flag = false;
+        document.getElementById("invalid-subject").style.display="block";
+    }
+    else{
+        document.getElementById("invalid-subject").style.display="none";
+    }
+
+    if(mess === ""){
+        flag = false;
+        document.getElementById("invalid-message").style.display="block";
+    }
+    else{
+        document.getElementById("invalid-message").style.display="none";
+    }
+    
+    if(flag){
+        document.getElementById("invalid-mail").style.display="none";
+        document.getElementById("invalid-subject").style.display="none";
+        document.getElementById("invalid-message").style.display="none";
+        document.getElementById("invalid-name").style.display="none";
+    }
+    return flag;
+}
 
 function setActiveStyle(colorName){
     replaceDefaultStyle("pink", colorName);
@@ -218,6 +235,7 @@ function setActiveStyle(colorName){
     replaceDefaultStyle("green", colorName);
     replaceDefaultStyle("red", colorName);
     replaceDefaultStyle("yellow", colorName);
+    replaceDefaultStyle("cyan", colorName);
     activeColor = colorName;
 }
 
@@ -227,18 +245,12 @@ $(document).ready(function () {
         $(".style-switcher").toggleClass("open")
     })
 
-    // function moveToSection(des) {
-    //     $(".part").fadeOut(0);
-    //     $(des).fadeIn(300);
-    // }
-    // $(".part").hide();
 
     $("#loader").animate({
         height: '0'
     }, 2000);
 
     $(".navigation__link").click(function () {
-        // moveToSection("#" + $(this).attr("id") + "-section");
         navBtn.click();
     })
 
