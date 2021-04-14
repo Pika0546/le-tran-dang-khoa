@@ -41,133 +41,8 @@ for (var i = 0; i < portBtns.length; i++) {
     })
 }
 
-function showProjectType(type) {
- 
-    if (type == " all-project")
-        type = "";
-    var cells = $(".port-fillter__cell");
-    for (var i = 0; i < cells.length; i++) {
-        if ($(cells[i]).attr("class").indexOf(type) <= -1) {
-            $(cells[i]).addClass("hide-ele");
-            $(cells[i]).removeClass("ani")
-           
-        }
-    }
-    for (var i = 0; i < cells.length; i++) {
-        if ($(cells[i]).attr("class").indexOf(type) > -1) {
-            $(cells[i]).removeClass("hide-ele");
-            if(type !== ""){
-                $(cells[i]).addClass("ani");
-            }
-           
-        }
-    }
-}
-
-document.getElementById("all-btn").click();
-var slideIndex = 0;
-var slides = document.getElementsByClassName("slide__container");
-
-function plusSlide(n) {
-    slideIndex += n;
-    showSlide(slideIndex);
-}
-
-var nextSlideBtn = document.getElementById("next-slide");
-var prevSlideBtn = document.getElementById("prev-slide");
-
-nextSlideBtn.addEventListener("click",function(){
-    plusSlide(1);
-    
-})
-
-prevSlideBtn.addEventListener("click",function(){
-    plusSlide(-1);
-})
 
 
-var w = window.innerWidth;
-    if (w <= 600) {
-        
-        nextSlideBtn.innerHTML = '<i class="fas fa-angle-down"></i>';
-        prevSlideBtn.innerHTML = '<i class="fas fa-angle-up"></i>';
-    } else {
-       
-        nextSlideBtn.innerHTML = '<i class="fas fa-angle-right">';
-        prevSlideBtn.innerHTML = '<i class="fas fa-angle-left">';
-    }
-window.addEventListener("resize", function () {
-    var w = window.innerWidth;
-    if (w <= 600) {
-        for (var i = 0; i < slides.length; i++) {
-            slides[i].style.left = 0;
-        }
-        nextSlideBtn.innerHTML = '<i class="fas fa-angle-down"></i>';
-        prevSlideBtn.innerHTML = '<i class="fas fa-angle-up"></i>';
-    } else {
-        for (var i = 0; i < slides.length; i++) {
-            slides[i].style.top = 0;
-        }
-        nextSlideBtn.innerHTML = '<i class="fas fa-angle-right">';
-        prevSlideBtn.innerHTML = '<i class="fas fa-angle-left">';
-    }
-    showSlide(slideIndex);
-})
-
-function showSlide(n) {
-
-    if (n >= slides.length) {
-        n = slides.length - 1;
-    }
-    if (n < 0) {
-        n = 0;
-    }
-    slideIndex = n;
-    var w = window.innerWidth;
-   
-    for (var i = 0; i < slides.length; i++) {
-        slides[i].style.top = 0;
-        slides[i].style.left = "75%";
-        slides[i].className = slides[i].className.replace(" slide--active", "");
-    }
-    if (w < 600) {
-        for (var i = 0; i < slides.length; i++) {
-            slides[i].style.left = 0;
-            slides[i].style.top =  (slides.length - 1)*35 -70 * (slideIndex ) + "%";
-        }
-    }
-    else {
-        for (var i = 0; i < slides.length; i++) {
-            slides[i].style.left = (slides.length - 1)*25 + -50 * (slideIndex) + "%";
-        }
-    }
- 
-    slides[slideIndex].className += " slide--active";
-    if(slideIndex == 0){
-        prevSlideBtn.style.display = "none";
-    }else{
-        prevSlideBtn.style.display = "block";
-    }
-    if(slideIndex == slides.length - 1){
-        nextSlideBtn.style.display = "none";
-    }else{
-        nextSlideBtn.style.display = "block";
-    }
-
-
-
-}
-
-function slideShow(n){
-    slideIndex = n;
-    $("#project-details-section").fadeIn(200);
-    showSlide(slideIndex);
-}
-
-function closeSlideShow () {
-    $("#project-details-section").fadeOut(0);
-
-}
 
 function replaceDefaultStyle(curr, next){
     var elements = document.querySelectorAll("[class*=" +curr + "]");
@@ -239,23 +114,139 @@ function setActiveStyle(colorName){
     activeColor = colorName;
 }
 
+function showProjectType(type) {
+ 
+    if (type == " all-project")
+        type = "";
+    var cells = $(".port-fillter__cell");
+    for (var i = 0; i < cells.length; i++) {
+        if ($(cells[i]).attr("class").indexOf(type) <= -1) {
+            $(cells[i]).addClass("hide-ele");
+
+           
+        }
+    }
+    for (var i = 0; i < cells.length; i++) {
+        if ($(cells[i]).attr("class").indexOf(type) > -1) {
+            $(cells[i]).removeClass("hide-ele");
+            if(type !== ""){
+                
+            }
+           
+        }
+    }
+}
+
+
+
 $(document).ready(function () {
 
+
+
+    $('#fmessage').val(" ")
     $(".toggle-style").click(function(){
         $(".style-switcher").toggleClass("open")
     })
 
+    let introString = "Hello, I'm Le Tran Dang Khoa1I'm a Front-end Developer"
+    for(let i = 0 ; i< introString.length ; i++){
+       
+        let c = introString[i];
+        if(c === '1'){
+            $('#header-intro').append("<br/>");
+            continue;
+        }
+        if(c === ' '){
+            c = '&nbsp;';
+        }
+        $('#header-intro').append("<span class='header__text'>"+c+"</span>")
+    }
 
-    $("#loader").animate({
-        height: '0'
-    }, 2000);
+    let headerBtnString = "More about me"
+    for(let i = 0 ; i < headerBtnString.length ; i++){
+        let c = headerBtnString[i];
+        if(c === ' '){
+            c = '&nbsp;';
+        }
+        $('#header-button').append("<span class='header__text pink-border'>"+c+"</span>")
+
+    }
+
+    let myProjects = null;
+    $.ajax({
+        'async': false,
+        'global': false,
+        'url': "script/project.json",
+        'dataType': "json",
+        'success': function (data) {
+            myProjects = data;
+        }
+    });
+
+    let projectsContainer = $("#project-container");
+    const projectNum = myProjects.length;
+    for(let i = 0 ; i < projectNum; i++){
+        let img = '<img src="'+myProjects[i].src1+'" alt="" class="pic portfolio__picture">'
+        let name = '<h3 class="pic__title ">'+myProjects[i].name+'</h3>'
+        $(projectsContainer).append('<div class="port-fillter__cell js-scroll '+ myProjects[i].type +'-project floating-block floating-block-hover" onclick="slideShow('+i+')">'+img+name+'</div>')
+    }
+   
+    let slides = $("#slide");
+    for(let i = 0 ; i < projectNum ; i++){
+        let srcCode = myProjects[i].srcCode === "" ? "#" : myProjects[i].srcCode;
+        let slide = `
+        <div class="slide__container">
+            <div class="slide__content">
+                <div class="slide__header">
+                    <h3 class="slide__name pink-text">`+myProjects[i].name+`</h3>
+                    <h4 class="slide__category"><span>Category</span> - `+myProjects[i].type+`</h4>
+                    <p class="slide__number">`+(i+1) +"/"+projectNum+`</p>
+                </div>
+                <div class="slide__detail">
+                    <div class="slide__brief">
+                        <h4 class="slide__brief__header">
+                            Project Brief
+                        </h4>
+                        <p class="paragraph paragraph__justify">
+                            `+myProjects[i].brief+`
+                        </p>
+                    </div>
+                    <div class="slide__info">
+                        <h4 class="slide__brief__header">
+                            Project Info
+                        </h4>
+                        <p class="paragraph"> <span>Date - </span>`+myProjects[i].date+`</p>
+                        <p class="paragraph"> <span>Author - </span>`+myProjects[i].author+`</p>
+                        <p class="paragraph"> <span>Tools - </span>`+myProjects[i].tool.join(", ")+`</p>
+                        <p class="paragraph"><span>Source Code - </span> <a target="_blank" href="`+ srcCode+ `">Link</a> </p>
+                    </div>
+                </div>
+                <div class="slide__project">
+                    <div class="slide__project__picture">
+                        <img src="`+myProjects[i].src2+`" alt="">
+                        <div class="slide__link">
+                            <i class="fas fa-hand-point-right slide__pointer pink-text"></i>
+                            <a class="pink-text" href="`+myProjects[i].link+`"
+                            target="_blank">See now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       `
+       $(slides).append(slide);
+      
+    }
+
+    document.getElementById("all-btn").click();
+    $("#loader").fadeOut(1000);
 
     $(".navigation__link").click(function () {
         navBtn.click();
     })
 
    scrollToTop=()=>{
-    window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
    }
    $(".scrolltop").fadeOut(00);
    $(window).scroll(()=>{
