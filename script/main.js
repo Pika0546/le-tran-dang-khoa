@@ -188,7 +188,7 @@ $(document).ready(function () {
     for(let i = 0 ; i < projectNum; i++){
         let img = '<img src="'+myProjects[i].src1+'" alt="" class="pic portfolio__picture">'
         let name = '<h3 class="pic__title ">'+myProjects[i].name+'</h3>'
-        $(projectsContainer).append('<div class="port-fillter__cell js-scroll '+ myProjects[i].type +'-project floating-block floating-block-hover" onclick="slideShow('+i+')">'+img+name+'</div>')
+        $(projectsContainer).append('<div class="port-fillter__cell '+ myProjects[i].type +'-project floating-block floating-block-hover" onclick="slideShow('+i+')">'+img+name+'</div>')
     }
    
     let slides = $("#slide");

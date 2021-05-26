@@ -5,7 +5,7 @@
         "src2":"./img/project/graphToolsIframe.png",
         "tool": ["React"],
         "author":"Me",
-        "type" : "WebApp",
+        "type" : "website",
         "link":"https://pika0546.github.io/graphTools/#/",
         "brief":"GraphTools is my biggest project so far. It allows graphing manually or through matrices and implements graph theory related algorithms such as: Euler trail, Hamilton trail, DFS, BFS, Minimum Spanning tree, Shortest Path,etc...",
         "srcCode":"https://github.com/Pika0546/projects/tree/main/graph",
