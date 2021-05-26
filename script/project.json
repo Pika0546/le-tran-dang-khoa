@@ -1,5 +1,17 @@
 [
     {
+        "name": "GraphTools",
+        "src1":"./img/project/graphTools.png",
+        "src2":"./img/project/graphToolsIframe.png",
+        "tool": ["React"],
+        "author":"Me",
+        "type" : "WebApp",
+        "link":"https://pika0546.github.io/graphTools/#/",
+        "brief":"GraphTools is my biggest project so far. It allows graphing manually or through matrices and implements graph theory related algorithms such as: Euler trail, Hamilton trail, DFS, BFS, Minimum Spanning tree, Shortest Path,etc...",
+        "srcCode":"https://github.com/Pika0546/projects/tree/main/graph",
+        "date":"2021"
+    },
+    {
         "name": "Tetris",
         "src1":"./img/project/tetris.png",
         "src2":"./img/project/tetrisIframe.png",
