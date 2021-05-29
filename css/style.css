@@ -1896,3 +1896,50 @@ a.cyan-hover-text:hover div span {
     .navigation-1__sub-btn:nth-child(5) a div:nth-child(8) {
       z-index: 1;
       transform: translateX(-700%); }
+
+.navbar {
+  position: fixed;
+  top: 50%;
+  right: 0rem;
+  transform: translateY(-50%);
+  border-radius: .2rem;
+  padding: .5rem 1rem; }
+  .navbar__item {
+    width: 2rem;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }
+    .navbar__item__social {
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .navbar__item div {
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .navbar__item__text {
+      display: block;
+      height: 0;
+      overflow: hidden;
+      transition: .3s all;
+      transform-origin: center center;
+      text-align: center;
+      border: 1px solid white;
+      border-radius: .5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between; }
+    .navbar__item:hover {
+      cursor: pointer; }
+      .navbar__item:hover .navbar__item__text {
+        height: 11rem;
+        padding: 1rem 0; }
+    .navbar__item:not(:last-child) {
+      margin-bottom: .6rem; }
