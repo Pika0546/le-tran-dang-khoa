@@ -142,5 +142,17 @@
         "brief":"This is just a cool Clock that I saw on facebook the other day",
         "srcCode":"https://github.com/Pika0546/projects/tree/main/Sudoku",
         "date":"2021"
+    },
+    {
+        "name": "Audio Player",
+        "src1":"./img/project/audio.png",
+        "src2":"./img/project/audioIframe.png",
+        "tool": ["ReactJS"],
+        "author":"Me",
+        "type" : "others",
+        "link":"https://pika0546.github.io/audio-player/",
+        "brief":"This is an audio player that I made with ReactJS. It has basic functions like next audio, pre audio, backward, forward, etc... ",
+        "srcCode":"https://github.com/Pika0546/projects/tree/main/AudioPlayer",
+        "date":"2021"
     }
 ]
